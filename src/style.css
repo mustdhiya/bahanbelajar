@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+/* Aktifkan toggle dark mode berbasis class .dark pada tag <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Latar belakang titik-titik khas roadmap.sh */
+.bg-grid-light {
+  background-color: #fafafa;
+  background-image: radial-gradient(#cbd5e1 1.35px, transparent 1.35px);
+  background-size: 24px 24px;
+}
+
+.dark .bg-grid-light {
+  background-color: #0b0f19;
+  background-image: radial-gradient(#1e293b 1.35px, transparent 1.35px);
+  background-size: 24px 24px;
+}
+
+/* Gaya Neo-Brutalist / Roadmap.sh Node */
+.rm-node {
+  transition:
+    transform 0.16s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.16s ease,
+    background-color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.rm-node:hover {
+  transform: translateY(-2px);
+}
+
+.rm-node:active {
+  transform: translateY(0px);
+}
+
+/* Spine Node (Kuning Utama) */
+.node-spine {
+  background-color: #facc15;
+  border: 2.5px solid #1e293b;
+  box-shadow: 4px 4px 0px #1e293b;
+  color: #0f172a;
+}
+
+.node-spine:hover {
+  box-shadow: 6px 6px 0px #1e293b;
+  background-color: #fde047;
+}
+
+.dark .node-spine {
+  border-color: #f8fafc;
+  box-shadow: 4px 4px 0px #f8fafc;
+}
+
+.dark .node-spine:hover {
+  box-shadow: 6px 6px 0px #f8fafc;
+}
+
+/* Branch Node (Krem / Slate) */
+.node-branch {
+  background-color: #fef9c3;
+  border: 2px solid #1e293b;
+  box-shadow: 3px 3px 0px #1e293b;
+  color: #1e293b;
+}
+
+.node-branch:hover {
+  background-color: #fef08a;
+  box-shadow: 5px 5px 0px #1e293b;
+}
+
+.dark .node-branch {
+  background-color: #1e293b;
+  border-color: #64748b;
+  box-shadow: 3px 3px 0px #475569;
+  color: #f1f5f9;
+}
+
+.dark .node-branch:hover {
+  background-color: #283548;
+  border-color: #94a3b8;
+  box-shadow: 5px 5px 0px #64748b;
+}
+
+/* Sub-branch Node (Putih / Dark Slate) */
+.node-subbranch {
+  background-color: #ffffff;
+  border: 2px solid #1e293b;
+  box-shadow: 2px 2px 0px #1e293b;
+  color: #0f172a;
+}
+
+.node-subbranch:hover {
+  background-color: #fffbeb;
+  box-shadow: 4px 4px 0px #1e293b;
+}
+
+.dark .node-subbranch {
+  background-color: #0f172a;
+  border-color: #64748b;
+  box-shadow: 2px 2px 0px #475569;
+  color: #f1f5f9;
+}
+
+.dark .node-subbranch:hover {
+  background-color: #1e293b;
+  box-shadow: 4px 4px 0px #64748b;
+}
+
+/* Status Selesai */
+.node-done {
+  background-color: #dcfce7 !important;
+  border-color: #15803d !important;
+  box-shadow: 3px 3px 0px #15803d !important;
+  color: #14532d !important;
+}
+
+.dark .node-done {
+  background-color: #064e3b !important;
+  border-color: #34d399 !important;
+  box-shadow: 3px 3px 0px #34d399 !important;
+  color: #ecfdf5 !important;
+}
+
+.node-done .node-title-text {
+  text-decoration: line-through;
+  opacity: 0.85;
+}
+
+/* Status Sedang Dipelajari */
+.node-progress {
+  background-color: #dbeafe !important;
+  border-color: #1d4ed8 !important;
+  box-shadow: 3px 3px 0px #1d4ed8 !important;
+  color: #1e3a8a !important;
+}
+
+.dark .node-progress {
+  background-color: #1e3a8a !important;
+  border-color: #60a5fa !important;
+  box-shadow: 3px 3px 0px #60a5fa !important;
+  color: #eff6ff !important;
+}
+
+/* Redup saat tidak cocok filter */
+.node-dimmed {
+  opacity: 0.25;
+  filter: grayscale(80%);
+}
+
+/* Scrollbar kustom untuk Drawer */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}

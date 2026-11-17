@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THP FPIK UNMUL → Crazy Rich Roadmap</title>
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-grid-light text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-sans antialiased selection:bg-amber-300 selection:text-slate-900">
+
+  <!-- Sticky Top Navigation & Progress Header -->
+  <header class="sticky top-0 z-30 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b-2 border-slate-900 dark:border-slate-700 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3.5">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
+        <!-- Brand & Title -->
+        <div class="flex items-start sm:items-center justify-between gap-3">
+          <div>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-mono font-bold bg-amber-400 text-slate-950 border border-slate-900">
+                FPIK UNMUL
+              </span>
+              <h1 class="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                THP UNMUL <span class="text-amber-500">→</span> CRAZY RICH ROADMAP
+              </h1>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-0.5">
+              Peta Jalan Hilirisasi Perikanan, Ekspor Global &amp; Bioteknologi (Samarinda ke Pasar Dunia)
+            </p>
+          </div>
+
+          <!-- Dark Mode Toggle (Mobile) -->
+          <button id="themeToggleMobile" type="button" aria-label="Toggle Dark Mode" class="lg:hidden p-2.5 rounded-lg border-2 border-slate-800 dark:border-slate-600 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+            <svg class="w-4 h-4 hidden dark:block text-amber-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            <svg class="w-4 h-4 block dark:hidden text-slate-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+        </div>
+
+        <!-- Progress Bar & Controls -->
+        <div class="flex flex-wrap items-center gap-3">
+          <div class="flex items-center gap-3 bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 flex-grow sm:flex-grow-0">
+            <div class="flex flex-col min-w-[140px] sm:min-w-[170px]">
+              <div class="flex justify-between items-center text-xs font-mono font-bold mb-1">
+                <span class="text-slate-700 dark:text-slate-300">PROGRESS</span>
+                <span id="progressText" class="text-emerald-600 dark:text-emerald-400">0% (0/0)</span>
+              </div>
+              <div class="w-full h-2 bg-slate-300 dark:bg-slate-700 rounded-full overflow-hidden">
+                <div id="progressBar" class="h-full bg-emerald-500 transition-all duration-300 rounded-full" style="width: 0%"></div>
+              </div>
+            </div>
+          </div>
+
+          <button id="resetProgressBtn" type="button" class="px-3 py-2 text-xs font-semibold rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-rose-50 hover:text-rose-600 hover:border-rose-300 dark:hover:bg-rose-950/40 dark:hover:text-rose-400 transition">
+            Reset
+          </button>
+
+          <!-- Dark Mode Toggle (Desktop) -->
+          <button id="themeToggleDesktop" type="button" aria-label="Toggle Dark Mode" class="hidden lg:inline-flex p-2.5 rounded-lg border-2 border-slate-800 dark:border-slate-600 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+            <svg class="w-4 h-4 hidden dark:block text-amber-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            <svg class="w-4 h-4 block dark:hidden text-slate-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Filter & Legend Sub-Bar -->
+      <div class="mt-3 pt-2.5 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-2.5">
+        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 md:pb-0" id="filterContainer">
+          <button type="button" data-filter="all" class="filter-btn active px-3 py-1.5 rounded-md text-xs font-bold bg-slate-900 text-white dark:bg-amber-400 dark:text-slate-950 transition whitespace-nowrap">
+            Semua Node
+          </button>
+          <button type="button" data-filter="spine" class="filter-btn px-3 py-1.5 rounded-md text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition whitespace-nowrap">
+            Milestone Utama
+          </button>
+          <button type="button" data-filter="samarinda" class="filter-btn px-3 py-1.5 rounded-md text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 hover:bg-emerald-100 transition whitespace-nowrap">
+            📍 Samarinda / Lab Unmul
+          </button>
+          <button type="button" data-filter="global" class="filter-btn px-3 py-1.5 rounded-md text-xs font-semibold bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 hover:bg-blue-100 transition whitespace-nowrap">
+            ✈️ Luar Kota / Ekspor
+          </button>
+          <button type="button" data-filter="leverage" class="filter-btn px-3 py-1.5 rounded-md text-xs font-semibold bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 hover:bg-purple-100 transition whitespace-nowrap">
+            💎 High-Margin Leverage
+          </button>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] font-medium text-slate-600 dark:text-slate-400">
+          <span class="inline-flex items-center gap-1.5">
+            <span class="w-3 h-3 rounded-sm bg-amber-400 border border-slate-900 inline-block"></span> Milestone Utama
+          </span>
+          <span class="inline-flex items-center gap-1.5">
+            <span class="w-3 h-3 rounded-sm bg-amber-100 dark:bg-slate-800 border border-slate-800 dark:border-slate-500 inline-block"></span> Topik Inti
+          </span>
+          <span class="inline-flex items-center gap-1.5">
+            <span class="w-3 h-3 rounded-sm bg-white dark:bg-slate-900 border border-slate-700 inline-block"></span> Sub-Cabang Materi
+          </span>
+          <span class="text-slate-400 dark:text-slate-500 hidden sm:inline">| Klik kotak untuk Audio, Visual &amp; Istilah Ilmiah</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Flowchart Canvas -->
+  <main class="flex-grow relative w-full max-w-6xl mx-auto px-4 sm:px-6 py-10">
+    <div class="flex justify-center mb-8 relative z-10">
+      <div class="px-5 py-2.5 rounded-full bg-slate-900 dark:bg-slate-800 text-white border-2 border-slate-900 dark:border-amber-400 shadow-md text-xs sm:text-sm font-mono font-bold tracking-wide flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
+        START: MAHASISWA THP FPIK UNMUL (SAMARINDA)
+      </div>
+    </div>
+
+    <div id="roadmapWrapper" class="relative">
+      <svg id="roadmapSvg" class="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-visible"></svg>
+      <div id="phasesContainer" class="relative z-10 space-y-16 sm:space-y-20"></div>
+    </div>
+
+    <div class="flex justify-center mt-14 relative z-10">
+      <div class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 text-slate-950 border-2 border-slate-900 shadow-[4px_4px_0px_#0f172a] text-center max-w-md">
+        <div class="text-xs font-mono font-extrabold uppercase tracking-wider text-slate-800">ENDGAME GOAL</div>
+        <div class="text-sm sm:text-base font-extrabold mt-0.5">👑 Global Seafood Exporter / B2B Biotech Founder</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Slide-Over Detail Drawer -->
+  <div id="drawerBackdrop" class="fixed inset-0 bg-slate-950/50 backdrop-blur-[2px] z-40 hidden opacity-0 transition-opacity duration-200"></div>
+
+  <aside id="detailDrawer" aria-hidden="true" class="fixed top-0 right-0 h-full w-full sm:w-[480px] md:w-[540px] bg-white dark:bg-slate-900 border-l-2 border-slate-900 dark:border-slate-700 shadow-2xl z-50 transform translate-x-full transition-transform duration-250 ease-out flex flex-col">
+    <div class="px-6 py-4 border-b border-slate-200 dark:border-slate-800 flex items-start justify-between gap-4 bg-slate-50 dark:bg-slate-900/90">
+      <div>
+        <div class="flex flex-wrap items-center gap-2 mb-1.5" id="drawerBadges"></div>
+        <h2 id="drawerTitle" class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white leading-snug">
+          Judul Node
+        </h2>
+      </div>
+      <button id="closeDrawerBtn" type="button" aria-label="Tutup panel" class="p-2 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-800 transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="px-6 py-3 bg-amber-50/70 dark:bg-slate-800/70 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2">
+      <span class="text-xs font-mono font-bold uppercase text-slate-600 dark:text-slate-400">Status Progres:</span>
+      <div class="inline-flex rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-0.5 shadow-xs" id="statusSelectorGroup">
+        <button type="button" data-status="pending" class="status-opt px-2.5 py-1 rounded-md text-xs font-semibold transition">Belum Mulai</button>
+        <button type="button" data-status="progress" class="status-opt px-2.5 py-1 rounded-md text-xs font-semibold transition">Dipelajari</button>
+        <button type="button" data-status="done" class="status-opt px-2.5 py-1 rounded-md text-xs font-semibold transition">✓ Selesai</button>
+      </div>
+    </div>
+
+    <div class="p-6 overflow-y-auto flex-grow space-y-5 text-sm leading-relaxed">
+      <div class="bg-gradient-to-r from-indigo-50 via-blue-50 to-cyan-50 dark:from-indigo-950/50 dark:via-blue-950/40 dark:to-slate-800 p-4 rounded-xl border-2 border-indigo-300 dark:border-indigo-700 shadow-xs space-y-3">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-xs font-mono font-extrabold uppercase tracking-wider text-indigo-800 dark:text-indigo-300 flex items-center gap-1.5">
+            <span>🎧</span> Mode Belajar Audio &amp; Visual
+          </span>
+          <span id="audioStatusBadge" class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/80 dark:bg-slate-900/80 text-slate-600 dark:text-slate-300 border border-indigo-200 dark:border-indigo-800">
+            Siap Diputar
+          </span>
+        </div>
+
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-white/80 dark:bg-slate-900/80 px-3 py-2 rounded-lg border border-indigo-200/80 dark:border-indigo-800/80">
+          <span class="text-[11px] font-bold text-slate-700 dark:text-slate-300">Mode Suara Narator:</span>
+          <div class="inline-flex rounded-md bg-slate-200/80 dark:bg-slate-800 p-0.5 text-[11px] font-bold" id="audioLangSelector">
+            <button type="button" data-audio-lang="bilingual" class="audio-lang-btn px-2.5 py-1 rounded bg-indigo-600 text-white shadow-2xs transition">
+              🇬🇧 Inggris + 🇮🇩 Arti Indo
+            </button>
+            <button type="button" data-audio-lang="id" class="audio-lang-btn px-2.5 py-1 rounded text-slate-700 dark:text-slate-300 transition">
+              🇮🇩 Full Bahasa Indonesia
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          <button id="playAudioBtn" type="button" class="inline-flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-xs transition">
+            <span id="playAudioIcon">🔊</span>
+            <span id="playAudioText">Dengarkan Penjelasan</span>
+          </button>
+          <a id="youtubeVisualBtn" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-xs font-bold bg-rose-600 hover:bg-rose-700 text-white shadow-xs transition">
+            <span>▶️</span>
+            <span>Lihat Visual di YouTube</span>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-xs font-mono font-extrabold uppercase tracking-wider text-cyan-700 dark:text-cyan-400 mb-2 flex items-center gap-1.5">
+          <span>🖼️</span> Peta Visual &amp; Alur Proses
+        </h3>
+        <div id="drawerVisualFlow" class="bg-cyan-50/70 dark:bg-cyan-950/30 p-3.5 rounded-xl border border-cyan-300 dark:border-cyan-800"></div>
+      </div>
+
+      <div class="bg-slate-100 dark:bg-slate-800/90 p-3.5 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2.5">
+        <div class="flex items-center justify-between text-xs font-mono font-bold">
+          <span class="text-slate-700 dark:text-slate-300">CHECKLIST PRAKTIKUM &amp; RISET</span>
+          <span id="drawerTodoProgressText" class="text-emerald-600 dark:text-emerald-400">0% (0/0)</span>
+        </div>
+        <div class="w-full h-2 bg-slate-300 dark:bg-slate-700 rounded-full overflow-hidden">
+          <div id="drawerTodoProgressBar" class="h-full bg-emerald-500 transition-all duration-300 rounded-full" style="width: 0%"></div>
+        </div>
+        <div class="pt-1 flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-t border-slate-200 dark:border-slate-700/80">
+          <div class="text-[11px] text-slate-600 dark:text-slate-400 truncate">
+            <span class="font-bold text-slate-800 dark:text-slate-200">🔍 Keyword:</span>
+            <span id="drawerKeywordsPreview" class="font-mono">...</span>
+          </div>
+          <button id="copyKeywordsBtn" type="button" class="shrink-0 inline-flex items-center justify-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-bold bg-slate-900 text-white dark:bg-amber-400 dark:text-slate-950 hover:opacity-90 transition">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+            <span id="copyKeywordsLabel">Copy Keyword</span>
+          </button>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-xs font-mono font-extrabold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-2 flex items-center gap-1.5">
+          <span>🔬</span> Bedah Istilah Ilmiah &amp; Konsep Detail
+        </h3>
+        <div id="drawerSyllabus" class="text-slate-700 dark:text-slate-300 space-y-2.5 bg-blue-50/50 dark:bg-blue-950/20 p-4 rounded-xl border border-blue-200 dark:border-blue-800/60"></div>
+      </div>
+
+      <div>
+        <h3 class="text-xs font-mono font-extrabold uppercase tracking-wider text-amber-600 dark:text-amber-400 mb-2 flex items-center gap-1.5">
+          <span>✅</span> Langkah Praktikum &amp; To-Do List
+        </h3>
+        <div id="drawerTodoList" class="space-y-2"></div>
+      </div>
+
+      <div>
+        <h3 class="text-xs font-mono font-extrabold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-2 flex items-center gap-1.5">
+          <span>🎯</span> Target Output &amp; Portofolio Nyata
+        </h3>
+        <div id="drawerOutput" class="text-slate-800 dark:text-slate-200 font-medium bg-emerald-50/70 dark:bg-emerald-950/30 p-4 rounded-xl border border-emerald-200 dark:border-emerald-800/60"></div>
+      </div>
+
+      <div>
+        <h3 class="text-xs font-mono font-extrabold uppercase tracking-wider text-purple-600 dark:text-purple-400 mb-2 flex items-center gap-1.5">
+          <span>💎</span> Tips Strategis &amp; Leverage "Crazy Rich"
+        </h3>
+        <div id="drawerTips" class="text-slate-700 dark:text-slate-300 bg-purple-50/70 dark:bg-purple-950/30 p-4 rounded-xl border border-purple-200 dark:border-purple-800/60"></div>
+      </div>
+    </div>
+
+    <div class="px-6 py-3.5 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 flex items-center justify-between">
+      <button id="prevNodeBtn" type="button" class="px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 text-xs font-semibold hover:bg-slate-200 dark:hover:bg-slate-800 transition">
+        ← Sebelumnya
+      </button>
+      <span class="text-[11px] font-mono text-slate-400">Tekan ESC untuk menutup</span>
+      <button id="nextNodeBtn" type="button" class="px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 text-xs font-semibold hover:bg-slate-200 dark:hover:bg-slate-800 transition">
+        Berikutnya →
+      </button>
+    </div>
+  </aside>
+
+  <!-- Reset Confirmation Modal -->
+  <div id="resetModal" class="fixed inset-0 bg-slate-950/60 backdrop-blur-xs z-50 hidden items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 border-2 border-slate-900 dark:border-slate-700 rounded-xl max-w-sm w-full p-5 shadow-xl">
+      <h3 class="text-base font-extrabold text-slate-900 dark:text-white">Reset Semua Progres?</h3>
+      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1.5">
+        Semua status checklist node yang sudah kamu tandai akan dikembalikan ke "Belum Mulai".
+      </p>
+      <div class="mt-5 flex justify-end gap-2">
+        <button id="cancelResetBtn" type="button" class="px-3.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 text-xs font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">
+          Batal
+        </button>
+        <button id="confirmResetBtn" type="button" class="px-3.5 py-1.5 rounded-lg bg-rose-600 text-white text-xs font-bold hover:bg-rose-700">
+          Ya, Reset Progres
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Entry Point TypeScript yang dikompilasi otomatis oleh Vite -->
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
