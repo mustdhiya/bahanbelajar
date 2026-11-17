@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1120" fill="none">
+  <!-- Diagonal Kuning Kiri -->
+  <path d="M377.5 123 L377.5 292 L12.5 721.5 C0 680 0 580 18 535 Z" fill="#E5DF15"/>
+  <!-- Panah / Pilar Utama Merah -->
+  <path d="M485 0 L912.5 487.5 L912.5 636 L558 236 L558 443 L485 522.5 L412.5 443 L412.5 82 Z" fill="#E31414"/>
+  <!-- Bentuk Huruf M Hijau -->
+  <path d="M216.5 578.5 L329.5 445.5 L485 616 L643.5 445.5 L756.5 578.5 L756.5 928 C865 882 940 775 935 628 C932 560 912.5 510 906.5 482 C968 548 1000 628 1000 722 C1000 945 815 1022 612.5 1030 L612.5 660.5 L485 801.5 L360.5 660.5 L360.5 1030 C306 1024 256 1011 216.5 996 Z" fill="#3CAE5C"/>
+  <!-- Bagian Lipatan Merah Gelap di Lengkung Kanan -->
+  <path d="M906.5 482 C936 535 942 605 932 666 L912.5 636 L912.5 487.5 Z" fill="#A31215"/>
+  <!-- Pilar Merah Bawah di Tengah M -->
+  <path d="M412.5 760.5 L485 839.5 L558 760.5 L558 1036 C508 1039 462 1039 412.5 1036 Z" fill="#E31414"/>
+</svg>
