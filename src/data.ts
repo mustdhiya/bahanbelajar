@@ -3,9 +3,6 @@
  * DATA ROADMAP: TEKNOLOGI HASIL PERIKANAN (THP) FPIK UNIVERSITAS MULAWARMAN
  * Peta Jalan Hilirisasi Perikanan, Bioteknologi & Ekspor Global
  * ============================================================================
- * Cara Penggunaan:
- * Simpan file ini dengan nama "data.js" di dalam folder yang sama dengan "index.html".
- * Data otomatis dibaca oleh index.html melalui variabel global `window.ROADMAP_PHASES`.
  */
 
 import type { RoadmapPhase } from './types';
@@ -21,39 +18,41 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
       category: 'spine',
       badgeText: 'FASE 1 • SEMESTER 1–2',
       badgeType: 'samarinda',
-      title: 'Fondasi Sains Perairan & Biokimia Ikan',
-      subtitle: 'Memahami struktur molekul daging ikan, air, dan penyebab pembusukan',
-      keywords: 'fish muscle biochemistry rigor mortis ATP degradation K-value',
+      title: 'Fondasi Sains Pascapanen Tropis Lembap & Biokimia Ikan',
+      subtitle: 'Menguasai struktur molekul daging ikan, rancangan statistik, dan peta produksi Kaltim',
+      keywords: 'Teknologi Hasil Perikanan FPIK Unmul biokimia pascapanen ikan tropis rigor mortis K-value',
       visualSteps: [
-        'Ikan hidup (energi ATP penuh, pH netral ~7,0, otot lentur) → Ditangkap & mati',
-        'Fase Pre-Rigor (otot masih lembut & elastis) → Fase Rigor Mortis (tubuh kaku karena ikatan aktomiosin)',
-        'Fase Post-Rigor (enzim autolisis memecah protein & lemak) → Bakteri pembusuk berkembang biak'
+        'Ikan hidup (ATP penuh, pH netral ~7,0, otot lentur) → Ditangkap & mati di lingkungan tropis lembap',
+        'Fase Pre-Rigor → Fase Rigor Mortis (ikatan aktomiosin mengunci; suhu dingin 0°C memperpanjang fase ini)',
+        'Fase Post-Rigor (enzim autolisis katepsin/kolagenase) → Degradasi ATP ke Hipoksantin & pertumbuhan bakteri',
+        'Analisis Data Mutu: Pengolahan data eksperimen memakai Rancangan Acak Lengkap (ANOVA) & Regresi Linier'
       ],
       syllabus: [
         {
-          topic: 'Post-Mortem Biochemistry (Biokimia Pascamati Ikan)',
-          detail: 'Perubahan reaksi kimia di dalam otot ikan tepat setelah ikan mati. Karena suplai oksigen berhenti, cadangan glikogen diubah secara anaerob menjadi asam laktat sehingga pH daging turun dari ~7,0 menjadi 6,2–6,5.'
+          topic: 'Post-Mortem Biochemistry (Biokimia Pascamati Ikan Tropis)',
+          detail: 'Perubahan reaksi kimia di dalam otot ikan tepat setelah suplai oksigen berhenti. Cadangan glikogen diubah secara anaerob menjadi asam laktat sehingga pH daging turun dari ~7,0 menjadi 6,2–6,5. Pada suhu ruang Samarinda (28–32°C), laju penurunan pH dan fase rigor berlangsung 3–4 kali lebih cepat dibanding suhu es 0°C.'
         },
         {
-          topic: 'Rigor Mortis (Kekakuan Tubuh Ikan)',
-          detail: 'Kondisi tubuh ikan menjadi kaku dan keras beberapa jam setelah mati akibat habisnya energi ATP sehingga filamen protein aktin dan miosin terkunci menjadi aktomiosin. Semakin lama fase ini dipertahankan dengan es, semakin segar ikannya.'
+          topic: 'Rigor Mortis & ATP Degradation Pathway (Jalur Degradasi Energi Otot)',
+          detail: 'Urutan pemecahan energi otot: ATP → ADP → AMP → IMP (asam inosinat pemberi rasa gurih umami) → Inosin (HxR) → Hipoksantin (Hx, penyebab rasa pahit dan bau busuk). Saat ATP habis, filamen aktin dan miosin terkunci menjadi aktomiosin yang menyebabkan tubuh ikan kaku.'
         },
         {
           topic: 'K-Value (Indeks Kesegaran Kimiawi)',
-          detail: 'Rasio hasil pemecahan ATP (Inosin dan Hipoksantin) dibandingkan total senyawa terkait ATP. Ikan kualitas sashimi atau ekspor premium wajib memiliki nilai K-Value di bawah 20%.'
+          detail: 'Rasio persentase [(HxR + Hx) / (ATP + ADP + AMP + IMP + HxR + Hx)] × 100%. Ikan kualitas sashimi atau ekspor segar grade A wajib memiliki nilai K-Value di bawah 20%, sedangkan ikan di atas 60% sudah memasuki fase pembusukan awal.'
         },
         {
-          topic: 'Autolysis (Pemecahan Diri oleh Enzim)',
-          detail: 'Proses pelunakan jaringan daging ikan dari dalam oleh enzim alami tubuh ikan sendiri (seperti katepsin dan kolagenase) sebelum bakteri dari luar mulai merusak daging.'
+          topic: 'Experimental Design & Biostatistics (Statistika Rancangan Percobaan FPIK)',
+          detail: 'Penguasaan Analisis Ragam (ANOVA / RAL & RAK) untuk menguji beda nyata perlakuan suhu, konsentrasi pereaksi, atau lama penyimpanan, serta Regresi Linier untuk memprediksi umur simpan di Kampus Gunung Kelua FPIK Unmul.'
         }
       ],
       todos: [
-        'Amati perubahan kekakuan (rigor mortis) pada ikan nila/patin segar di suhu ruang vs suhu es 0°C.',
-        'Hafalkan jalur degradasi ATP → ADP → AMP → IMP (rasa gurih umami) → Inosin → Hipoksantin (penyebab rasa pahit).',
-        'Kuasai dasar-dasar kimia larutan (molaritas, normalitas, pengenceran, pH, titrasi) di praktikum Kimia Dasar Unmul.'
+        'Unduh dokumen Kurikulum, RPS, dan daftar peralatan laboratorium internal Prodi THP FPIK Unmul (Kampus Gunung Kelua, Jl. Gunung Tabur, Samarinda).',
+        'Amati perubahan kekakuan (rigor mortis) pada ikan nila/patin segar di suhu ruang Samarinda (~30°C) vs boks es curai 0°C setiap jam hingga fase post-rigor.',
+        'Hafalkan jalur degradasi ATP → ADP → AMP → IMP → Inosin → Hipoksantin serta rumus perhitungan K-Value.',
+        'Ikuti kegiatan pengabdian pesisir atau kompetisi ilmiah FPIK Unmul (seperti PHYCOFEST atau PKM di Pulau Tihi-Tihi Bontang / Sungai Kapih Samarinda).'
       ],
-      output: 'Laporan praktikum pengamatan fase rigor mortis dan tabel perbandingan laju kemunduran mutu ikan air tawar Kaltim.',
-      tips: 'Paham biokimia dasar membuatmu langsung mengerti kenapa pabrik ekspor rela membayar mahal untuk es curai dan pembekuan cepat.'
+      output: 'Matriks Pemetaan Komoditas Kalimantan Timur (berbasis data BPS & DKP) serta laporan praktikum pengamatan rigor mortis berbasis uji statistik ANOVA.',
+      tips: 'Paham biokimia dasar dan statistik membuatmu langsung mengerti kenapa pabrik ekspor rela membayar mahal untuk es curai dan pembekuan cepat, sekaligus memudahkanmu menyusun proposal hibah riset sejak semester awal.'
     },
     left: [
       {
@@ -61,90 +60,99 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
         category: 'branch',
         badgeText: '📍 LOKAL KALTIM',
         badgeType: 'samarinda',
-        title: 'Identifikasi Komoditas Unggulan Kaltim',
-        subtitle: 'Karakteristik biologis & kimia ikan Sungai Mahakam dan pesisir',
-        keywords: 'Channa striata albumin content Penaeus monodon Kaltim fisheries',
+        title: 'Identifikasi & Peta Produksi Komoditas Kaltim',
+        subtitle: 'Data produksi BPS 162.125 ton/tahun & realisasi ekspor Rp230 miliar di Kaltim',
+        keywords: 'komoditas perikanan Delta Mahakam udang windu kepiting bakau rumput laut Bontang',
         visualSteps: [
-          'Perairan Umum Daratan (Sungai Mahakam, Danau Semayang & Melintang: Ikan Gabus, Patin, Toman, Jelawat)',
-          'Kawasan Tambak Delta Mahakam & Muara Badak (Udang Windu Organik & Kepiting Bakau)',
-          'Pesisir Bontang, Berau & Paser (Ikan Kakap, Kerapu, Tuna & Rumput Laut Eucheuma cottonii)'
+          'Basis Budidaya Kaltim (BPS 2022): Total 162.125 ton (Rp7,04 Triliun) dari Tambak Sederhana (77.316 ton) & Karamba (73.885 ton)',
+          'Sentra Regional: Kutai Kartanegara (72.027 ton karamba & 52.277 ton tambak), Paser (13.889 ton), PPU (9.201 ton), Bontang (4.185 ton rumput laut)',
+          'Kinerja Ekspor (Jan–Mei 2026): 1.262 ton senilai Rp230 Miliar (Ekspor Udang Jan–Jul 2026 mencapai 1.385,88 ton / Rp274,74 Miliar)'
         ],
         syllabus: [
           {
-            topic: 'Pelagic vs Demersal Fish (Ikan Pelagis vs Ikan Demersal)',
-            detail: 'Ikan pelagis (tongkol, cakalang, kembung) berenang aktif di lapisan permukaan sehingga tinggi lemak tak jenuh dan asam amino histidin. Ikan demersal (kakap, kerapu, patin) hidup di dasar perairan dengan daging putih rendah lemak.'
+            topic: 'Regional Aquaculture Production Map (Peta Produksi Budidaya Kaltim)',
+            detail: 'Berdasarkan data BPS Kaltim (2022), produksi didominasi tambak sederhana (77.316 ton; Rp4,15 triliun) dan karamba air tawar (73.885 ton; Rp2,68 triliun), disusul rumput laut (5.396 ton; Rp22,14 miliar) dan kolam air tenang (4.813 ton). Rata-rata nilai hulu tambak Rp53.617/kg, sedangkan rata-rata nilai ekspor udang 2026 menembus Rp198.242/kg (lompatan >3,6x lipat).'
           },
           {
-            topic: 'Sarcoplasmic Protein (Protein Sarkoplasma)',
-            detail: 'Protein larut air di dalam cairan sel otot ikan (seperti mioglobin dan enzim). Ikan gabus (Channa striata) dari rawa Kaltim memiliki fraksi albumin sarkoplasma yang sangat tinggi.'
+            topic: 'Pelagic vs Demersal Fish (Ikan Pelagis vs Ikan Demersal)',
+            detail: 'Ikan pelagis (tongkol, cakalang, kembung) berenang aktif di lapisan permukaan sehingga tinggi lemak tak jenuh dan asam amino histidin (precursor histamin). Ikan demersal (kakap, kerapu, patin, bawal putih) hidup di dasar perairan dengan daging putih rendah lemak.'
+          },
+          {
+            topic: 'Sarcoplasmic vs Myofibrillar Protein (Fraksi Protein Otot Ikan)',
+            detail: 'Protein sarkoplasma (20–30%) larut dalam air/larutan garam rendah (mioglobin, enzim, albumin). Protein miofibril (65–75%; aktin dan miosin) larut dalam garam konsentrasi tinggi dan bertanggung jawab membentuk gel kenyal pada surimi/bakso.'
           }
         ],
         todos: [
-          'Kunjungi Pasar Pagi / Pasar Segiri Samarinda dan TPI untuk mendata harga, musim panen, dan jenis ikan lokal.',
-          'Bandingkan struktur serat daging merah (dark muscle) dan daging putih (white muscle) pada ikan.'
+          'Kunjungi Pasar Pagi / Pasar Segiri Samarinda dan TPI lokal untuk mendata harga harian, ukuran rata-rata, dan asal pasokan ikan (Sungai Mahakam vs pesisir).',
+          'Susun tabel basis data 5 komoditas prioritas Kaltim (udang windu, kepiting bakau, ikan gabus, ikan patin karamba, dan rumput laut Bontang) beserta volume produksi tiap kabupaten/kota.',
+          'Bandingkan struktur serat dan kadar lemak daging merah (dark muscle) vs daging putih (white muscle) pada ikan tongkol dan ikan patin.'
         ],
-        output: 'Database pribadi profil kimia & harga bahan baku 10 komoditas utama Kalimantan Timur.',
-        tips: 'Kekayaan calon pengusaha perikanan dimulai dari tahu persis di mana sumber bahan baku termurah dan paling melimpah di daerahnya.',
+        output: 'Database pribadi profil kimia, volume pasokan daerah, dan harga bahan baku 10 komoditas utama Kalimantan Timur.',
+        tips: 'Jangan hanya melihat daging ikannya; sentra tambak Kukar (52.277 ton) dan karamba Mahakam menghasilkan puluhan ribu ton limbah cangkang, kulit, dan tulang murah untuk diekstrak pada fase bioteknologi.',
         subBranches: [
           {
             id: 'p1-sub-mahakam',
             category: 'subbranch',
             badgeText: 'SUB-CABANG 1.1',
             badgeType: 'samarinda',
-            title: 'Komoditas Perairan Darat (Mahakam)',
-            subtitle: 'Ikan Gabus (Haruan), Patin, Baung & Jelawat',
-            keywords: 'Channa striata Pangasius hypothalamus muscle composition',
+            title: 'Komoditas Perairan Darat (DAS Mahakam)',
+            subtitle: 'Ikan Gabus (Haruan), Patin Karamba Kukar, Baung & Jelawat',
+            keywords: 'Channa striata albumin 62.24 g/kg Pangasius hypothalamus Mahakam fisheries',
             visualSteps: [
-              'Ikan Gabus / Haruan → Tinggi protein albumin (bahan suplemen medis penyembuh luka)',
-              'Ikan Patin Sungai → Kadar lemak perut tinggi (potensi minyak ikan Omega-9 & fillet beku)',
-              'Ikan Jelawat & Baung → Daging putih padat bernilai ekonomi tinggi untuk restoran'
+              'Ikan Gabus / Haruan (Channa striata) → Kadar albumin tinggi 62,24 g/kg (6,22%), bahan baku suplemen medis',
+              'Ikan Patin Karamba (Kutai Kartanegara 72.027 ton) → Lemak perut tinggi untuk minyak Omega-9 & fillet beku',
+              'Ikan Jelawat, Baung & Bawal Putih (Ekspor Kaltim 77,9 ton senilai Rp8,9 Miliar / Rp114.249/kg)'
             ],
             syllabus: [
               {
-                topic: 'Albumin Fraction (Fraksi Albumin Ikan Gabus)',
-                detail: 'Protein globular larut air yang berfungsi mengatur tekanan osmotik darah dan mempercepat regenerasi sel jaringan luka pasca-operasi.'
+                topic: 'Channa striata Albumin Profile (Profil Albumin Ikan Gabus)',
+                detail: 'Ikan gabus air tawar mengandung albumin sebesar 62,24 g/kg (6,22%) atau menyusun 55–60% total protein plasma. Protein globular ini bersifat larut air, mempertahankan tekanan onkotik darah, dan mudah terkoagulasi bila dipanaskan di atas suhu 50–60°C.'
               },
               {
-                topic: 'Lipid Oxidation in Fatty Fish (Oksidasi Lemak Ikan Berlemak)',
-                detail: 'Ikan patin memiliki kandungan lemak tinggi yang mudah bereaksi dengan oksigen udara menjadi ketengikan (rancidity) jika tidak dikemas vakum.'
+                topic: 'Lipid Oxidation in Freshwater Fatty Fish (Oksidasi Lemak Ikan Patin)',
+                detail: 'Ikan patin budidaya karamba memiliki kandungan lemak abdomen tinggi yang mudah teroksidasi oleh oksigen udara menjadi hidroperoksida dan aldehida penyebab ketengikan (rancidity) dan warna kekuningan (yellowing) jika tidak dikemas vakum.'
               }
             ],
             todos: [
-              'Bandingkan rendemen daging (edible portion) antara ikan patin dan ikan gabus segar.',
-              'Catat jaringan pengepul ikan gabus di Kota Bangun, Muara Muntai, dan Danau Melintang.'
+              'Hitung rendemen bagian dapat dimakan (edible portion) serta persentase limbah kepala, tulang, dan kulit pada ikan patin dan ikan gabus segar.',
+              'Petakan jalur pengepul ikan gabus dari Kota Bangun, Muara Muntai, dan Danau Semayang/Melintang menuju Samarinda.'
             ],
-            output: 'Tabel rendemen daging dan potensi turunan produk dari 4 ikan khas Sungai Mahakam.',
-            tips: 'Ikan gabus adalah "emas cair" Kalimantan Timur jika diekstrak menjadi albumin murni standar farmasi.'
+            output: 'Tabel rendemen daging, fraksi limbah, dan potensi turunan produk dari 4 ikan khas Sungai Mahakam.',
+            tips: 'Ikan gabus adalah "emas cair" Kalimantan Timur jika diekstrak pada suhu terkontrol menjadi serbuk albumin standar farmasi.'
           },
           {
             id: 'p1-sub-pesisir',
             category: 'subbranch',
             badgeText: 'SUB-CABANG 1.2',
             badgeType: 'samarinda',
-            title: 'Komoditas Pesisir & Tambak Kaltim',
-            subtitle: 'Udang Windu Delta Mahakam, Kepiting & Rumput Laut',
-            keywords: 'Penaeus monodon melanosis polyphenol oxidase Kappaphycus alvarezii',
+            title: 'Ekosistem Delta Mahakam, Krustasea & Rumput Laut Bontang',
+            subtitle: 'Mosaik mangrove–tambak 1.500 km², udang windu ekspor & 4.185 ton rumput laut Bontang',
+            keywords: 'Delta Mahakam mangrove pond Penaeus monodon melanosis Eucheuma cottonii Bontang',
             visualSteps: [
-              'Udang Windu & Vaname → Rentan noda hitam (melanosis) jika suhu naik di atas 4°C',
-              'Kepiting Bakau → Harus dikirim hidup (live export) atau pasteurisasi daging kaleng',
-              'Rumput Laut Cottonii → Sumber karaginan (bahan pengental industri makanan & kosmetik)'
+              'Delta Mahakam (1.500 km²): Udang Windu (P. monodon), Udang Putih (P. merguiensis), Baramundi & Kepiting Bakau',
+              'Mitigasi Ekologi Mangrove: Belajar dari model silvofishery Pegat Batumbuk Berau agar tambak bebas antibiotik',
+              'Rumput Laut Bontang (4.185 ton dari 5.396 ton Kaltim; Rp4.102/kg) → Sumber Karaginan & Pangan Fungsional'
             ],
             syllabus: [
               {
-                topic: 'Melanosis / Blackspot (Noda Hitam pada Udang)',
-                detail: 'Reaksi pencokelatan enzimatis pada kepala dan ruas kulit udang akibat kerja enzim polifenol oksidase (PPO) saat udang terkena oksigen dan suhu hangat.'
+                topic: 'Delta Mahakam Mangrove–Pond Mosaic (Ekosistem Tambak Delta Mahakam)',
+                detail: 'Kawasan sedimentasi seluas ±1.500 km² yang bermuara ke Selat Makassar dengan vegetasi Nypa fruticans, Avicennia alba, dan Bruguiera gymnorrhiza. Tantangan utamanya adalah menjaga keberlanjutan tambak ekstensif agar bebas residu kimia dan bersertifikat ekspor.'
               },
               {
-                topic: 'Carrageenan Hydrocolloid (Hidrokoloid Karaginan)',
-                detail: 'Senyawa polisakarida yang diekstrak dari rumput laut merah (Eucheuma cottonii) yang mampu membentuk gel kuat saat dipanaskan.'
+                topic: 'Melanosis / Blackspot (Noda Hitam Enzimatis Udang)',
+                detail: 'Reaksi oksidasi senyawa fenol menjadi kuinon berwarna hitam pada kepala dan ruas kulit udang akibat kerja enzim polifenol oksidase (PPO) saat udang terkena oksigen dan suhu hangat di atas 4°C.'
+              },
+              {
+                topic: 'Carrageenan Hydrocolloid (Hidrokoloid Karaginan Rumput Laut)',
+                detail: 'Polisakarida sulfat yang diekstrak dari rumput laut merah (Eucheuma cottonii / Kappaphycus alvarezii) asal Bontang dan Paser yang mampu membentuk gel termoreversibel kuat untuk industri pangan dan kosmetik.'
               }
             ],
             todos: [
-              'Pelajari cara mencegah blackspot pada udang menggunakan es dan natrium metabisulfit sesuai batas aman SNI.',
-              'Cari data produksi rumput laut di Kabupaten Paser, Bontang, dan Berau.'
+              'Pelajari protokol pencegahan blackspot pada udang menggunakan es curai 1:1 dan perendaman natrium metabisulfit sesuai batas residu SO2 SNI.',
+              'Kaji studi kasus pengolahan rumput laut di Pulau Tihi-Tihi Bontang (seperti inovasi brownies rumput laut kukus FPIK Unmul) dan hitung potensi nilai tambahnya dari harga hulu Rp4.102/kg.'
             ],
-            output: 'Ringkasan protokol penanganan khusus krustasea dan rumput laut pesisir Kaltim.',
-            tips: 'Udang windu organik dari tambak tradisional Delta Mahakam memiliki harga jual premium di pasar Jepang.'
+            output: 'Ringkasan protokol penanganan pascapanen krustasea Delta Mahakam dan peta pasokan rumput laut Bontang–Paser.',
+            tips: 'Udang windu organik dari tambak silvofishery Delta Mahakam merupakan komoditas penyumbang devisa terbesar Kaltim (Rp274,74 miliar pada Jan–Jul 2026) yang diburu buyer Jepang.'
           }
         ]
       }
@@ -153,20 +161,20 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
       {
         id: 'p1-kimia-dasar',
         category: 'branch',
-        badgeText: '🧪 LAB UNMUL',
+        badgeText: '🧪 LAB UNMUL & SNI',
         badgeType: 'samarinda',
-        title: 'Kimia Pangan & Analisis Proksimat (AOAC)',
-        subtitle: 'Mengukur komposisi gizi utama bahan pangan secara akurat',
-        keywords: 'proximate analysis AOAC fish moisture protein lipid ash',
+        title: 'Kimia Pangan & Analisis Proksimat Standar SNI/AOAC',
+        subtitle: 'Protokol resmi pengujian air, abu, protein, lemak & garam beserta tolok ukur biaya lab',
+        keywords: 'SNI 2354 proximate analysis AOAC fish moisture protein lipid ash salt',
         visualSteps: [
           'Sampel Daging Ikan Dihaluskan (Homogenisasi) agar mewakili seluruh bagian tubuh',
-          'Dipecah menjadi 4 Fraksi Utama: Air, Abu (Mineral), Protein, dan Lemak',
-          'Data digunakan untuk menyusun Label Nutrition Facts & Formulasi Produk Ekspor'
+          'Dipecah menjadi Fraksi Resmi SNI: Air (SNI 2354.2), Abu (SNI 2354.1), Protein (01-2354.4), Lemak (2354.3), Garam (01-2359)',
+          'Data digunakan untuk menyusun Label Nutrition Facts, Formulasi Produk & Certificate of Analysis (CoA)'
         ],
         syllabus: [
           {
-            topic: 'Proximate Analysis (Analisis Proksimat)',
-            detail: 'Serangkaian uji kimia standar internasional (AOAC / SNI) untuk mengetahui persentase makronutrisi utama dalam bahan pangan: kadar air, kadar abu, protein kasar, lemak kasar, dan karbohidrat (by difference).'
+            topic: 'SNI Proximate Suite & Testing Cost Benchmarks (Standar Uji Proksimat SNI)',
+            detail: 'Rangkaian uji kimia resmi BPPMHKP: Kadar Abu (SNI 2354.1:2010; tarif rujukan Rp50.000), Kadar Air (SNI 2354.2:2015; Rp30.000), Kadar Lemak (SNI 2354.3:2017; Rp75.000), Kadar Protein (SNI 01-2354.4:2006; Rp75.000), dan Kadar Garam (SNI 01-2359:1991).'
           },
           {
             topic: 'Water Activity / Aw (Aktivitas Air)',
@@ -175,28 +183,29 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
         ],
         todos: [
           'Pahami perbedaan mendasar antara Kadar Air (Moisture Content) dan Aktivitas Air (Aw).',
-          'Latih ketelitian menimbang sampel menggunakan neraca analitik 4 desimal (0,0001 g) di lab.'
+          'Latih ketelitian menimbang sampel menggunakan neraca analitik 4 desimal (0,0001 g) di lab FPIK Unmul.',
+          'Hitung total anggaran pengujian proksimat lengkap + kadar garam untuk 1 sampel produk baru saat menyusun RAB penelitian atau P2MW.'
         ],
-        output: 'Kemampuan membaca dan menghitung hasil uji proksimat sesuai SNI 01-2354.',
-        tips: 'Setiap pabrik makanan dan eksportir pasti menguji proksimat untuk menjamin mutu produknya konsisten.',
+        output: 'Kemampuan membaca, menghitung, dan menganggarkan hasil uji proksimat sesuai seri SNI 2354.',
+        tips: 'Setiap pabrik makanan dan eksportir pasti menguji proksimat untuk menjamin mutu produknya konsisten dan memenuhi syarat label gizi BPOM.',
         subBranches: [
           {
             id: 'p1-sub-air-abu',
             category: 'subbranch',
             badgeText: 'SUB-CABANG 1.3',
             badgeType: 'samarinda',
-            title: '1. Kadar Air (Oven) & Kadar Abu (Tanur)',
-            subtitle: 'Metode Gravimetri penguapan air dan pembakaran mineral',
-            keywords: 'gravimetric moisture oven method ash muffle furnace 550C',
+            title: '1. Kadar Air (SNI 2354.2:2015) & Kadar Abu (SNI 2354.1:2010)',
+            subtitle: 'Metode Gravimetri penguapan air oven 105°C dan pembakaran mineral tanur 550°C',
+            keywords: 'SNI 2354.2 moisture oven 105C SNI 2354.1 ash muffle furnace 550C',
             visualSteps: [
               'Cawan porselen dikeringkan di oven → Didinginkan di Desikator → Ditimbang kosong (W0)',
-              'Sampel dimasukkan (W1) → Dipanaskan di Oven 105°C sampai berat konstan (Kadar Air)',
-              'Sampel dibakar di Tanur (Muffle Furnace) suhu 550°C hingga jadi abu putih (Kadar Abu)'
+              'Sampel dimasukkan (W1) → Dipanaskan di Oven 105°C sampai berat konstan (Kadar Air - SNI 2354.2:2015)',
+              'Sampel dibakar di Tanur (Muffle Furnace) suhu 550°C hingga jadi abu putih (Kadar Abu - SNI 2354.1:2010)'
             ],
             syllabus: [
               {
-                topic: 'Gravimetry (Metode Gravimetri)',
-                detail: 'Metode analisis kimia kuantitatif berdasarkan pengukuran selisih berat sampel sebelum dan sesudah proses pemanasan atau penguapan.'
+                topic: 'Gravimetry (Metode Gravimetri SNI 2354.1 & 2354.2)',
+                detail: 'Metode analisis kimia kuantitatif berdasarkan pengukuran selisih berat sampel sebelum dan sesudah proses penguapan air pada suhu 105°C hingga bobot konstan atau pengabuan pada 550°C.'
               },
               {
                 topic: 'Desiccator (Desikator)',
@@ -207,17 +216,17 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
               'Hafalkan rumus perhitungan % Kadar Air = [(W1 - W2) / (W1 - W0)] × 100%.',
               'Praktikkan penggunaan penjepit cawan (krustang) agar kelembapan sidik jari tidak menambah berat cawan.'
             ],
-            output: 'Lembar kerja perhitungan kadar air dan kadar abu bebas galat penimbangan.',
-            tips: 'Kesalahan menyentuh cawan dengan tangan kosong bisa mengubah hasil timbangan 4 desimal!'
+            output: 'Lembar kerja perhitungan kadar air dan kadar abu bebas galat penimbangan sesuai SNI.',
+            tips: 'Pada ekstraksi kitosan dan gelatin komersial, kadar abu sangat rendah (<0,1%–1,5%) menjadi indikator utama keberhasilan tahap demineralisasi HCl!'
           },
           {
             id: 'p1-sub-protein',
             category: 'subbranch',
             badgeText: 'SUB-CABANG 1.4',
             badgeType: 'samarinda',
-            title: '2. Uji Protein Metode Kjeldahl',
-            subtitle: '3 Tahap: Destruksi, Destilasi, dan Titrasi Nitrogen',
-            keywords: 'Kjeldahl protein determination digestion distillation titration fish',
+            title: '2. Uji Protein Metode Kjeldahl (SNI 01-2354.4:2006)',
+            subtitle: '3 Tahap: Destruksi H2SO4, Destilasi Amonia, dan Titrasi Nitrogen',
+            keywords: 'SNI 01-2354.4 Kjeldahl protein determination digestion distillation titration fish',
             visualSteps: [
               'Tahap 1 Destruksi: Sampel + H2SO4 pekat dipanaskan 400°C (Protein diubah jadi Amonium Sulfat)',
               'Tahap 2 Destilasi: Ditambah NaOH pekat + dipanaskan (Gas Amonia NH3 ditangkap Asam Borat)',
@@ -230,12 +239,12 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
               },
               {
                 topic: 'Conversion Factor 6.25 (Faktor Konversi Nitrogen)',
-                detail: 'Rata-rata protein hewani/ikan mengandung 16% unsur Nitrogen (100 / 16 = 6,25). Jadi kadar nitrogen total dikalikan 6,25 untuk mendapatkan kadar protein kasar.'
+                detail: 'Rata-rata protein hewani/ikan mengandung 16% unsur Nitrogen (100 / 16 = 6,25). Jadi kadar nitrogen total dikalikan 6,25 untuk mendapatkan kadar protein kasar (untuk kolagen/gelatin murni faktor konversinya 5,55).'
               }
             ],
             todos: [
               'Pelajari fungsi tiap reagen Kjeldahl (H2SO4, katalis selenium, NaOH 40%, Asam Borat, indikator PP/MM).',
-              'Kerjakan 3 latihan soal perhitungan % Protein dari volume titrasi HCl.'
+              'Kerjakan 3 latihan soal perhitungan % Protein dari volume titrasi HCl sesuai SNI 01-2354.4:2006.'
             ],
             output: 'Penguasaan penuh alur laboratorium uji protein Kjeldahl.',
             tips: 'Kjeldahl adalah metode wajib di seluruh laboratorium QC industri pangan, pakan ikan, dan ekspor.'
@@ -245,9 +254,9 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
             category: 'subbranch',
             badgeText: 'SUB-CABANG 1.5',
             badgeType: 'samarinda',
-            title: '3. Uji Lemak Metode Soxhlet & Profil Omega-3',
-            subtitle: 'Ekstraksi lemak berkelanjutan menggunakan pelarut organik',
-            keywords: 'Soxhlet fat extraction hexane fish oil EPA DHA',
+            title: '3. Uji Lemak Soxhlet (SNI 2354.3:2017) & Profil Omega-3',
+            subtitle: 'Ekstraksi lemak berkelanjutan menggunakan pelarut organik non-polar',
+            keywords: 'SNI 2354.3 Soxhlet fat extraction hexane fish oil EPA DHA',
             visualSteps: [
               'Sampel dibungkus kertas saring bebas lemak (Thimble) → Dimasukkan ke tabung ekstraktor Soxhlet',
               'Pelarut N-Heksana dipanaskan → Menguap ke kondensor → Menetes merendam sampel',
@@ -255,7 +264,7 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
             ],
             syllabus: [
               {
-                topic: 'Solvent Extraction (Ekstraksi Pelarut Non-Polar)',
+                topic: 'Solvent Extraction (Ekstraksi Pelarut Non-Polar SNI 2354.3:2017)',
                 detail: 'Prinsip "like dissolves like": lemak bersifat non-polar sehingga dilarutkan sempurna oleh pelarut organik non-polar seperti N-Heksana atau Petroleum Eter.'
               },
               {
@@ -285,58 +294,58 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
       category: 'spine',
       badgeText: 'FASE 2 • SEMESTER 3–4',
       badgeType: 'samarinda',
-      title: 'Keamanan Pangan, Mikrobiologi & Rantai Dingin',
-      subtitle: 'Senjata utama seorang Quality Control (QC) & QA pabrik pengolahan ekspor',
-      keywords: 'seafood food safety microbiology cold chain management HACCP',
+      title: 'Keamanan Pangan, Pengujian SNI & Rantai Dingin',
+      subtitle: 'Senjata utama Quality Control (QC) & QA pabrik pengolahan ekspor berstandar BPPMHKP',
+      keywords: 'SNI 2346 SNI 2354.8 TVB-N seafood food safety microbiology cold chain MAP',
       visualSteps: [
-        'Bahan Baku Segar → Kontrol Suhu Ketat (0°C s/d -25°C) tanpa terputus (Unbroken Cold Chain)',
-        'Pengujian Cemaran Bakteri Patogen, Parasit & Kimia Berbahaya di Laboratorium QC',
-        'Sanitasi Lini Produksi (SSOP) → Produk Lolos Inspeksi Karantina / FDA / Uni Eropa'
+        'Bahan Baku Segar → Kontrol Suhu Pusat (SNI 01-2372.1:2006) & Rantai Dingin 0°C s/d -25°C tanpa terputus',
+        'Uji Sensori Skala 1–9 (SNI 2346:2015) & Konfirmasi Kimia TVB-N (SNI 2354.8:2009) + Patogen',
+        'Teknologi Kemasan MAP / Pembekuan Cepat → Produk Lolos Inspeksi BPPMHKP / FDA / Uni Eropa'
       ],
       syllabus: [
+        {
+          topic: 'Organoleptic & TVB-N Verification (SNI 2346:2015 & SNI 2354.8:2009)',
+          detail: 'Penilaian panelis terlatih (misal 30 panelis pada uji tuna) memakai skor skala angka 1–9 (sampel tuna beku pasca-pelelehan memenuhi standar dengan rata-rata nilai 8, interval 7,60–8,40). Bila skor sensori meragukan, dikonfirmasi secara objektif dengan uji TVB-N & TMA-N (SNI 2354.8:2009: ekstraksi HClO4 6%, pembasaan NaOH 20%, destilasi uap ke H3BO3 3%, titrasi HCl 0,02 N; satuan mgN%; tarif rujukan Rp60.000).'
+        },
         {
           topic: 'Foodborne Pathogens (Bakteri Patogen Bawaan Pangan)',
           detail: 'Bakteri berbahaya yang tidak mengubah bau, warna, atau rasa ikan, tetapi menyebabkan keracunan fatal pada manusia (seperti Salmonella, Vibrio cholerae, Listeria monocytogenes, dan Clostridium botulinum).'
         },
         {
           topic: 'Time-Temperature Abuse (Penyalahgunaan Waktu & Suhu)',
-          detail: 'Membiarkan ikan berada di zona bahaya suhu (Danger Zone: 5°C – 60°C) terlalu lama sehingga bakteri membelah diri setiap 20 menit dan memproduksi toksin tahan panas.'
-        },
-        {
-          topic: 'Intrinsic vs Extrinsic Factors (Faktor Intrinsik vs Ekstrinsik Mikroba)',
-          detail: 'Faktor intrinsik berasal dari dalam ikan (pH ~6,5, aktivitas air Aw ~0,99, nutrisi tinggi). Faktor ekstrinsik berasal dari lingkungan luar (suhu penyimpanan, kelembapan ruang, dan komposisi gas).'
+          detail: 'Membiarkan ikan berada di zona bahaya suhu (Danger Zone: 5°C – 60°C) terlalu lama sehingga bakteri membelah diri setiap 20 menit dan memproduksi toksin tahan panas seperti histamin.'
         },
         {
           topic: 'Psychrotrophic Bacteria (Bakteri Psikrotrof)',
-          detail: 'Kelompok bakteri pembusuk khas ikan laut (seperti Pseudomonas dan Shewanella) yang tetap mampu tumbuh perlahan pada suhu dingin kulkas (0°C – 5°C) dan menghasilkan senyawa bau busuk (TMA).'
+          detail: 'Kelompok bakteri pembusuk khas ikan laut (seperti Pseudomonas dan Shewanella) yang tetap mampu tumbuh perlahan pada suhu dingin kulkas (0°C – 5°C) dan menghasilkan senyawa basa volatil (TVB-N / TMA).'
         }
       ],
       todos: [
         'Kuasai teknik kerja aseptis di dekat api bunsen dan di dalam Laminar Air Flow (LAF).',
-        'Hafalkan batas maksimum cemaran mikroba, histamin, dan logam berat pada ikan/udang beku menurut SNI & BPOM.',
-        'Pelajari kurva pertumbuhan bakteri (Fase Lag, Log/Eksponensial, Stasioner, dan Kematian).'
+        'Praktikkan penilaian sensori skala 1–9 (SNI 2346:2015) dan prosedur titrasi TVB-N (SNI 2354.8:2009) menggunakan pereaksi HClO4 6%, NaOH 20%, H3BO3 3%, dan HCl 0,02 N.',
+        'Pelajari dokumen syarat mutu SNI 2729:2021 (ikan segar) dan SNI 4110:2020 (ikan beku) serta kurva pertumbuhan bakteri (Lag, Log, Stasioner, Kematian).'
       ],
-      output: 'Kemampuan melakukan audit sanitasi dan pengujian mikrobiologi dasar produk perikanan.',
-      tips: 'Alasan utama kontainer ekspor udang/ikan Indonesia ditolak di Amerika atau Jepang adalah bakteri Salmonella dan residu antibiotik.'
+      output: 'Dokumen Protokol Uji Mutu SNI terstandar dan laporan simulasi Certificate of Analysis (CoA) internal.',
+      tips: 'Alasan utama kontainer ekspor udang/ikan Indonesia ditolak di Amerika atau Jepang adalah kegagalan parameter objektif: ALT, Salmonella, Vibrio, histamin, residu antibiotik, atau logam berat Pb > 0,4 ppm.'
     },
     left: [
       {
         id: 'p2-mikrobiologi',
         category: 'branch',
-        badgeText: '🦠 LAB MIKROBIOLOGI',
+        badgeText: '🦠 LAB MIKROBIOLOGI & KIMIA',
         badgeType: 'samarinda',
-        title: 'Mikrobiologi & Keamanan Hayati Perikanan',
-        subtitle: 'Menghitung total bakteri, mendeteksi patogen & mengendalikan sanitasi pabrik',
-        keywords: 'TPC total plate count Salmonella Vibrio seafood testing SNI',
+        title: 'Mikrobiologi, Residu & Keamanan Hayati Perikanan',
+        subtitle: 'Protokol pengujian resmi SNI 2332, logam berat AAS, histamin & swab sanitasi 100 cm²',
+        keywords: 'SNI 2332 ALT Salmonella Vibrio histamine SNI 2354.10 heavy metals Pb 0.4 ppm',
         visualSteps: [
           'Sampel ikan 25g ditimbang steril di kantong Stomacher + 225 mL Larutan pengencer (BPW)',
-          'Pengenceran bertingkat (10^-1 sampai 10^-5) menggunakan mikropipet steril',
-          'Inokulasi ke media selektif/agar → Inkubasi suhu terkontrol → Identifikasi & hitung koloni'
+          'Uji Mikrobiologi SNI 2332 (ALT, E. coli APM, Salmonella per 25g, Vibrio) & Swab Permukaan per 100 cm²',
+          'Uji Toksin & Kimia: Histamin (SNI 2354.10), Logam Berat AAS (Pb ≤ 0,4 ppm), dan Residu Antibiotik'
         ],
         syllabus: [
           {
-            topic: 'TPC / Total Plate Count (Angka Lempeng Total)',
-            detail: 'Metode menghitung jumlah total koloni bakteri aerob mesofilik hidup dalam 1 gram sampel makanan (satuan CFU/g). Standar ekspor ikan beku umumnya maksimal 5 × 10^5 CFU/g.'
+            topic: 'Official SNI Microbiology Suite (Rangkaian Uji Mikrobiologi SNI 2332)',
+            detail: 'Meliputi Angka Lempeng Total / ALT (SNI 2332.3:2015; tarif Rp50.000), Coliform & E. coli APM/g (SNI 2332.1:2015), Salmonella per 25g (SNI 01-2332.2:2006; Rp200.000), Vibrio cholerae & V. parahaemolyticus (SNI 2332.4–5:2006), Staphylococcus aureus (SNI 2332.9:2015; Rp200.000), serta inspeksi parasit (SNI 2332.6:2009) dan filth (SNI 2372.7:2011).'
           },
           {
             topic: 'Zero Tolerance Pathogens (Patogen Toleransi Nol)',
@@ -351,29 +360,29 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
           'Latih teknik pengenceran desimal (serial dilution) dan penuangan agar (pour plate & spread plate).',
           'Pelajari cara mengoperasikan Autoklaf, Inkubator, Stomacher, dan Colony Counter di lab FPIK Unmul.'
         ],
-        output: 'Hasil uji TPC dan identifikasi koloni bakteri pada produk perikanan segar & olahan.',
-        tips: 'Analis mikrobiologi yang teliti selalu dicari oleh pabrik cold storage dan laboratorium pengujian.',
+        output: 'Hasil uji ALT dan identifikasi koloni bakteri pada produk perikanan segar & olahan sesuai SNI 2332.',
+        tips: 'Analis mikrobiologi yang menguasai seri SNI 2332 dan perhitungan biaya uji laboratorium selalu dicari oleh pabrik cold storage dan laboratorium pengujian.',
         subBranches: [
           {
             id: 'p2-sub-tpc',
             category: 'subbranch',
             badgeText: 'SUB-CABANG 2.1',
             badgeType: 'samarinda',
-            title: 'Uji Angka Lempeng Total (TPC) & E. coli (MPN)',
+            title: 'Uji ALT (SNI 2332.3:2015) & E. coli APM (SNI 2332.1:2015)',
             subtitle: 'Indikator kebersihan proses produksi, air pencuci, dan sanitasi pekerja',
-            keywords: 'CFU colony forming unit E. coli MPN seafood hygiene',
+            keywords: 'SNI 2332.3 CFU colony forming unit E. coli APM SNI 2332.1 seafood hygiene',
             visualSteps: [
-              'Media PCA (Plate Count Agar) diinkubasi 35°C selama 48 jam untuk hitung total bakteri',
-              'Uji Coliform & E. coli metode MPN 3 seri tabung (LSTB → BGLB → EC Broth) suhu 44,5°C',
+              'Media PCA (Plate Count Agar) diinkubasi 35°C selama 48 jam untuk hitung total bakteri (koloni/g)',
+              'Uji Coliform & E. coli metode APM 3 seri tabung (LSTB → BGLB → EC Broth) suhu 44,5°C',
               'Konfirmasi E. coli di media EMB Agar (koloni hijau metalik khas) & uji IMViC'
             ],
             syllabus: [
               {
-                topic: 'CFU / Colony Forming Unit (Unit Pembentuk Koloni)',
-                detail: 'Satuan hitung mikrobiologi di mana 1 titik koloni yang tumbuh di cawan agar diasumsikan berasal dari 1 sel bakteri hidup. Cawan yang sah dihitung hanya yang berisi 30–300 koloni.'
+                topic: 'CFU / Colony Forming Unit (Unit Pembentuk Koloni - SNI 2332.3:2015)',
+                detail: 'Satuan hitung mikrobiologi di mana 1 titik koloni yang tumbuh di cawan agar diasumsikan berasal dari 1 sel bakteri hidup. Cawan yang sah dihitung hanya yang berisi 30–300 koloni. Standar ekspor ikan beku umumnya maksimal 5 × 10^5 koloni/g.'
               },
               {
-                topic: 'MPN / Most Probable Number (Angka Paling Mungkin)',
+                topic: 'APM / Most Probable Number (Angka Paling Mungkin - SNI 2332.1:2015)',
                 detail: 'Metode estimasi statistik jumlah bakteri Coliform dan E. coli berdasarkan pembentukan gas di dalam tabung kecil terbalik (tabung Durham).'
               },
               {
@@ -382,11 +391,11 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
               }
             ],
             todos: [
-              'Hafalkan rumus perhitungan CFU/g dengan mempertimbangkan faktor pengenceran dan aturan pembulatan 2 angka signifikan.',
+              'Hafalkan rumus perhitungan koloni/g dengan mempertimbangkan faktor pengenceran dan aturan pembulatan 2 angka signifikan.',
               'Praktikkan pewarnaan Gram (Gram positif berwarna ungu vs Gram negatif merah muda).'
             ],
-            output: 'Laporan perhitungan CFU/g dan indeks sanitasi air & es pabrik.',
-            tips: 'Air dan es yang dipakai di pabrik pengolahan wajib diuji E. coli setiap bulan (syarat: < 3 MPN/100 mL).'
+            output: 'Laporan perhitungan ALT (koloni/g) dan indeks sanitasi air & es pabrik.',
+            tips: 'Air dan es yang dipakai di pabrik pengolahan wajib diuji E. coli setiap bulan (syarat: < 3 APM/100 mL).'
           },
           {
             id: 'p2-sub-patogen',
@@ -395,7 +404,7 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
             badgeType: 'global',
             title: 'Deteksi Patogen Kritis: Salmonella, Vibrio & Listeria',
             subtitle: 'Penyebab utama penolakan kontainer ekspor di FDA Amerika & Uni Eropa',
-            keywords: 'Salmonella Vibrio cholerae parahaemolyticus Listeria seafood ISO',
+            keywords: 'SNI 01-2332.2 Salmonella SNI 2332.4 Vibrio cholerae parahaemolyticus Listeria',
             visualSteps: [
               'Pre-Enrichment (Pengayaan awal) sampel 25g agar bakteri yang stres/pingsan pulih kembali',
               'Selective Enrichment & Goresan di Media Selektif (XLD/HE untuk Salmonella; TCBS untuk Vibrio)',
@@ -403,11 +412,11 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
             ],
             syllabus: [
               {
-                topic: 'Salmonella sp. (Bakteri Batang Gram Negatif)',
-                detail: 'Bakteri penyebab demam tifoid dan salmonellosis yang sering mencemari udang tambak akibat kotoran burung/hewan di sekitar tambak. Pada media XLD Agar membentuk koloni merah dengan titik hitam (H2S) di tengah.'
+                topic: 'Salmonella sp. (SNI 01-2332.2:2006)',
+                detail: 'Bakteri batang Gram negatif penyebab demam tifoid dan salmonellosis yang sering mencemari udang tambak akibat kotoran burung/hewan di sekitar tambak. Pada media XLD Agar membentuk koloni merah dengan titik hitam (H2S) di tengah (wajib negatif per 25 g).'
               },
               {
-                topic: 'Vibrio cholerae & Vibrio parahaemolyticus',
+                topic: 'Vibrio cholerae & Vibrio parahaemolyticus (SNI 2332.4–5:2006)',
                 detail: 'Bakteri alami perairan payau dan laut yang tumbuh subur di media TCBS Agar (V. cholerae berwarna kuning karena memfermentasi sukrosa; V. parahaemolyticus berwarna hijau kebiruan).'
               },
               {
@@ -416,10 +425,10 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
               }
             ],
             todos: [
-              'Pelajari perbedaan warna koloni bakteri pada media diferensial XLD Agar, TCBS Agar, dan MSA (Staphylococcus aureus).',
+              'Pelajari perbedaan warna koloni bakteri pada media diferensial XLD Agar, TCBS Agar, dan MSA (Staphylococcus aureus SNI 2332.9:2015).',
               'Pahami prosedur pemusnahan limbah biakan bakteri patogen menggunakan autoklaf sebelum dibuang.'
             ],
-            output: 'Alur diagnostik identifikasi patogen perikanan sesuai standar ISO & SNI.',
+            output: 'Alur diagnostik identifikasi patogen perikanan sesuai standar SNI 2332 & ISO.',
             tips: 'Jika kamu paham cara mencegah dan menguji Salmonella & Vibrio, pabrik udang ekspor akan langsung merekrutmu sebagai staf QC.'
           },
           {
@@ -427,63 +436,63 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
             category: 'subbranch',
             badgeText: 'SUB-CABANG 2.3',
             badgeType: 'samarinda',
-            title: 'Deteksi Histamin, Residu Antibiotik & Logam Berat',
-            subtitle: 'Keamanan kimiawi untuk ikan pelagis, udang tambak & ikan Sungai Mahakam',
-            keywords: 'histamine scombroid poisoning chloramphenicol nitrofuran mercury seafood',
+            title: 'Histamin (SNI 2354.10), Antibiotik & Logam Berat AAS',
+            subtitle: 'Keamanan kimiawi untuk ikan Scombridae, udang tambak & ikan Sungai Mahakam',
+            keywords: 'SNI 2354.10 histamine HPLC SNI 2354.5 lead 0.4 ppm SNI 7587 antibiotics',
             visualSteps: [
-              'Ikan Tuna/Tongkol tidak didinginkan → Enzim bakteri mengubah asam amino Histidin jadi Histamin',
-              'Uji cepat Histamin (ELISA / Spektrofotometri) & Residu Antibiotik Udang (LC-MS/MS)',
-              'Uji Formalin/Boraks (Test Kit) & Logam Berat Merkuri/Timbal/Kadmium (AAS/ICP)'
+              'Ikan Tuna/Tongkol tidak didinginkan → Uji Histamin (SNI 2354.10:2009) via Spektrofluorometri / HPLC',
+              'Udang Tambak → Uji Residu Antibiotik Chloramphenicol & Nitrofuran (AOZ, AMOZ, AHD, SEM; SNI 7587.3–5:2010)',
+              'Uji Formalin/Boraks/Rhodamin-B (AOAC) & Logam Berat Pb, Cd (SNI 2354.5), Hg (SNI 2354.6) via AAS'
             ],
             syllabus: [
               {
-                topic: 'Histamine / Scombroid Poisoning (Keracunan Histamin)',
-                detail: 'Racun tahan panas yang terbentuk pada ikan berdaging merah (tuna, cakalang, tongkol) akibat enzim histidin dekarboksilase bila suhu naik di atas 4°C. Histamin tidak hilang walau ikan dimasak atau dikalengkan!'
+                topic: 'Histamine Analysis (SNI 2354.10:2009)',
+                detail: 'Pengujian wajib untuk ikan famili Scombridae (tuna, cakalang, tongkol) secara kuantitatif memakai spektrofluorometri atau Kromatografi Cair Kinerja Tinggi (HPLC). Racun ini tahan panas dan tidak hilang meski dimasak/dikalengkan.'
               },
               {
-                topic: 'Banned Antibiotics (Antibiotik Terlarang: Kloramfenikol & Nitrofuran)',
-                detail: 'Obat-obatan yang dilarang keras digunakan di tambak udang/ikan karena bersifat karsinogenik. Deteksi residu sekecil 0,1 ppb saja membuat seluruh kontainer ekspor dimusnahkan.'
+                topic: 'Banned Antibiotics (SNI 7587.3–5:2010)',
+                detail: 'Pengujian residu antibiotik terlarang Chloramphenicol dan metabolit Nitrofuran (AOZ, AMOZ, AHD, SEM) pada udang tambak (tarif rujukan Rp300.000/parameter). Deteksi sekecil 0,1 ppb menyebabkan penolakan ekspor.'
               },
               {
-                topic: 'Bioaccumulation of Heavy Metals (Bioakumulasi Logam Berat)',
-                detail: 'Penumpukan logam berat (Merkuri/Hg, Timbal/Pb, Kadmium/Cd) dari aktivitas tambang atau industri di jaringan lemak dan hati ikan/kerang.'
+                topic: 'Heavy Metals AAS (SNI 2354.5:2011 & SNI 2354.6:2016)',
+                detail: 'Pengukuran logam berat Timbal (Pb), Kadmium (Cd), dan Merkuri (Hg) menggunakan Atomic Absorption Spectrophotometer (AAS; tarif rujukan Rp200.000). Batas maksimum Pb sesuai SNI 7387:2009 dan Uni Eropa untuk tuna sebesar 0,4 ppm.'
               }
             ],
             todos: [
-              'Lakukan simulasi uji cepat formalin dan boraks pada sampel ikan pasar menggunakan test kit.',
-              'Hafalkan batas maksimum cemaran histamin (maks 50 ppm FDA / 100 ppm SNI) dan logam berat BPOM.'
+              'Lakukan simulasi uji kualitatif formalin, boraks, dan rhodamin-B (metode AOAC) pada sampel produk pasar.',
+              'Hafalkan batas maksimum Pb (0,4 ppm pada tuna SNI 7387:2009 / UE) dan histamin (maks 50 ppm FDA / 100 ppm SNI).'
             ],
             output: 'Protokol skrining bahaya kimiawi untuk penerimaan bahan baku pabrik.',
-            tips: 'Di Kaltim yang banyak aktivitas tambang dan sungai, uji logam berat adalah nilai jual riset yang sangat penting.'
+            tips: 'Di Kaltim yang banyak aktivitas tambang dan sungai, penguasaan uji logam berat AAS adalah nilai jual riset yang sangat penting.'
           },
           {
             id: 'p2-sub-sanitasi',
             category: 'subbranch',
             badgeText: 'SUB-CABANG 2.4',
             badgeType: 'samarinda',
-            title: 'Sanitasi Industri, Klorinasi & Pengendalian Biofilm',
-            subtitle: 'Membersihkan meja stainless, lantai, dan tangan pekerja agar bebas kontaminasi',
-            keywords: 'sanitation CIP biofilm chlorine ATP swab test seafood plant',
+            title: 'Sanitasi Industri, Swab Test 100 cm² & Pengendalian Biofilm',
+            subtitle: 'Verifikasi kebersihan meja stainless, lantai, dan pekerja sesuai standar BPPMHKP',
+            keywords: 'sanitation swab test 100 cm2 biofilm chlorine ATP seafood plant',
             visualSteps: [
               'Pre-rinse (Bilas kotoran kasar) → Pembersihan dengan Deterjen Alkalis (angkat lemak/protein)',
               'Pembilasan air bersih → Disinfeksi dengan Klorin / Peracetic Acid / Alkohol 70%',
-              'Verifikasi kebersihan menggunakan ATP Bioluminescence Swab Test sebelum produksi dimulai'
+              'Verifikasi kebersihan menggunakan Metode Swab Permukaan per 100 cm² & ATP Bioluminescence'
             ],
             syllabus: [
               {
-                topic: 'Biofilm (Lapisan Lendir Bakteri Resisten)',
-                detail: 'Kumpulan mikroba yang menempel kuat pada permukaan meja stainless steel atau ban berjalan (conveyor) dan membungkus dirinya dengan matriks polisakarida sehingga kebal terhadap disinfektan biasa.'
+                topic: 'Surface Swabbing Protocol (Metode Swab Sanitasi per 100 cm²)',
+                detail: 'Pengambilan sampel usap steril pada luas area standar 100 cm² di permukaan meja kerja, pisau, dan tangan pekerja untuk menguji cemaran ALT dan Coliform/E. coli sebelum lini produksi beroperasi.'
               },
               {
-                topic: 'Free Chlorine Concentration (Kadar Klorin Bebas)',
-                detail: 'Standar konsentrasi klorin di pabrik pengolahan ikan: air pencuci ikan (1–3 ppm), air celup sepatu/footbath (100–200 ppm), dan air sanitasi meja/alat (50–100 ppm).'
+                topic: 'Biofilm & Free Chlorine Concentration (Biofilm & Kadar Klorin Bebas)',
+                detail: 'Biofilm adalah lapisan lendir bakteri resisten pada permukaan baja tahan karat. Standar klorin bebas pabrik: air pencuci ikan (1–3 ppm), air celup sepatu/footbath (100–200 ppm), dan air sanitasi meja/alat (50–100 ppm).'
               }
             ],
             todos: [
-              'Pelajari perbedaan fungsi Cleaning (menghilangkan kotoran fisik/lemak dengan sabun) dan Sanitizing (membunuh bakteri dengan disinfektan).',
+              'Praktikkan teknik swabbing area 10 × 10 cm (100 cm²) menggunakan template steril di laboratorium.',
               'Hitung rumus pengenceran larutan klorin (NaOCl) untuk kebutuhan sanitasi ruang produksi.'
             ],
-            output: 'Jadwal & konsentrasi larutan sanitasi standar pabrik pengolahan ikan.',
+            output: 'Jadwal, konsentrasi larutan sanitasi, dan formulir uji swab 100 cm² standar pabrik.',
             tips: 'Disinfektan tidak akan bekerja jika meja masih berminyak—wajib dicuci deterjen dulu baru disanitasi!'
           }
         ]
@@ -493,24 +502,24 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
       {
         id: 'p2-coldchain',
         category: 'branch',
-        badgeText: '❄️ RANTAI DINGIN',
+        badgeText: '❄️ RANTAI DINGIN & MAP',
         badgeType: 'global',
-        title: 'Teknologi Pendinginan & Pembekuan (Cold Chain)',
-        subtitle: 'Menjaga kesegaran ikan seolah baru diangkat dari laut selama berbulan-bulan',
-        keywords: 'IQF individual quick freezing air blast freezer glazing fish',
+        title: 'Teknologi Rantai Dingin, Pembekuan & Kemasan MAP',
+        subtitle: 'Kontrol suhu pusat SNI 01-2372.1, pembekuan cepat & perpanjangan umur simpan 9x lipat',
+        keywords: 'SNI 01-2372.1 core temperature IQF ABF MAP modified atmosphere packaging',
         visualSteps: [
-          'Penanganan cepat di kapal/tambak (Chilling 0°C dengan es curai perbandingan 1:1)',
-          'Pembekuan cepat melewati Thermal Arrest Zone (-1°C s/d -5°C) dalam waktu < 2 jam',
-          'Glazing (pelapisan es tipis) → Penyimpanan di Cold Storage suhu -20°C s/d -25°C'
+          'Penanganan cepat (Chilling 0°C es curai 1:1) & Ukur Suhu Pusat Ikan (SNI 01-2372.1:2006)',
+          'Pembekuan cepat melewati Thermal Arrest Zone (-1°C s/d -5°C) & Cek Bobot Tuntas (SNI 2372-8:2019)',
+          'Penyimpanan Cold Storage (-20°C s/d -25°C) atau Kemasan MAP (V/W 2,5:1 pada suhu mendekati 0°C)'
         ],
         syllabus: [
           {
-            topic: 'Thermal Arrest Zone (Zona Pembekuan Kritis -1°C s/d -5°C)',
-            detail: 'Rentang suhu di mana 75–80% air di dalam daging ikan berubah menjadi kristal es. Harus dilewati secepat mungkin agar kristal es berukuran mikro dan tidak merobek dinding sel daging.'
+            topic: 'Core Temperature & Drained Weight Inspection (SNI 01-2372.1 & SNI 2372-8)',
+            detail: 'Pengukuran suhu pusat ikan (SNI 01-2372.1:2006) memastikan pusat termal mencapai ≤ -18°C pada produk beku (mengacu SNI 4110:2020) dan 0–4°C pada ikan segar (SNI 2729:2021), sementara uji bobot tuntas (SNI 2372-8:2019) memverifikasi berat bersih tanpa lapisan es glazing.'
           },
           {
-            topic: 'Drip Loss (Kehilangan Cairan Saat Pelelehan)',
-            detail: 'Cairan bernutrisi, protein larut air, dan cita rasa yang keluar saat ikan beku dicairkan (thawing). Pembekuan lambat menghasilkan kristal es besar yang merusak sel sehingga drip loss tinggi dan daging menjadi kering.'
+            topic: 'Thermal Arrest Zone & Drip Loss (-1°C s/d -5°C)',
+            detail: 'Rentang suhu di mana 75–80% air di dalam daging ikan berubah menjadi kristal es. Harus dilewati secepat mungkin agar kristal es berukuran mikro dan tidak merobek dinding sel daging sehingga drip loss saat pelelehan tetap rendah.'
           },
           {
             topic: 'Eutectic Point (Titik Eutektik Ikan -55°C)',
@@ -519,9 +528,9 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
         ],
         todos: [
           'Bandingkan tekstur dan jumlah air keluar (drip loss) daging ikan yang dibekukan lambat di freezer rumah tangga vs pembekuan cepat.',
-          'Pelajari jenis-jenis es industri: Es Balok (Block Ice), Es Curai (Flake Ice), dan Es Bubur (Slurry Ice).'
+          'Praktikkan pengukuran suhu pusat ikan (SNI 01-2372.1:2006) menggunakan termometer tusuk terkalibrasi dan uji bobot tuntas (SNI 2372-8:2019).'
         ],
-        output: 'SOP penanganan rantai dingin dari tambak/kapal hingga masuk kontainer reefer.',
+        output: 'SOP penanganan rantai dingin dari tambak/kapal hingga masuk kontainer reefer mengacu SNI 2729:2021 & SNI 4110:2020.',
         tips: 'Bisnis penyewaan Cold Storage dan pabrik es curai di sentra perikanan Kaltim adalah bisnis infrastruktur yang sangat menguntungkan.',
         subBranches: [
           {
@@ -531,7 +540,7 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
             badgeType: 'global',
             title: 'Teknik Ikejime & Penanganan Premium Jepang',
             subtitle: 'Menaikkan harga jual ikan segar 3x lipat untuk pasar restoran & ekspor',
-            keywords: 'ikejime technique shinkei jime bleeding fish quality',
+            keywords: 'ikejime technique shinkei jime bleeding fish quality sashimi',
             visualSteps: [
               'Tusuk titik otak ikan (Brain Spiking) agar ikan mati instan tanpa stres',
               'Potong insang & pangkal ekor → Keluarkan seluruh darah di air es (Bleeding)',
@@ -540,7 +549,7 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
             syllabus: [
               {
                 topic: 'Ikejime & Shinkei-jime (Teknik Pemingsanan & Penghancuran Saraf)',
-                detail: 'Metode tradisional Jepang mematikan ikan secara instan dan merusak sumsum tulang belakang agar sinyal refleks stres tidak menghabiskan cadangan ATP otot.'
+                detail: 'Metode tradisional Jepang mematikan ikan secara instan dan merusak sumsum tulang belakang agar sinyal refleks stres tidak menghabiskan cadangan ATP otot sehingga K-Value bertahan di bawah 20% lebih lama.'
               },
               {
                 topic: 'Exsanguination / Bleeding (Pengeluaran Darah Sempurna)',
@@ -549,7 +558,7 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
             ],
             todos: [
               'Tonton video anatomi titik otak ikan kerapu/kakap dan praktikkan teknik ikejime.',
-              'Bandingkan warna daging ikan yang di-bleeding vs tidak di-bleeding.'
+              'Bandingkan warna daging dan pH ikan yang di-bleeding vs tidak di-bleeding.'
             ],
             output: 'Video demonstrasi dan SOP penanganan ikan hidup/segar standar sashimi.',
             tips: 'Nelayan biasa menjual kakap Rp 45.000/kg; dengan teknik ikejime dan rantai dingin, harganya bisa tembus Rp 120.000+/kg.'
@@ -561,7 +570,7 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
             badgeType: 'global',
             title: 'Air Blast Freezer (ABF), Contact Plate & IQF',
             subtitle: 'Teknologi mesin pembekuan industri udang dan fillet ikan ekspor',
-            keywords: 'Air Blast Freezer Contact Plate IQF shrimp glazing cold storage',
+            keywords: 'Air Blast Freezer Contact Plate IQF shrimp glazing SNI 4110',
             visualSteps: [
               'Contact Plate Freezer (CPF): Pembekuan blok udang/surimi di antara pelat logam bersuhu -40°C',
               'Air Blast Freezer (ABF): Hembusan udara dingin kecepatan tinggi (-35°C s/d -40°C)',
@@ -570,7 +579,7 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
             syllabus: [
               {
                 topic: 'IQF (Individual Quick Freezing)',
-                detail: 'Teknik pembekuan cepat di mana setiap ekor udang atau potong fillet dibekukan secara terpisah menggunakan hembusan udara sangat dingin (-40°C) di atas konveyor berjalan sehingga tidak saling menempel.'
+                detail: 'Teknik pembekuan cepat di mana setiap ekor udang atau potong fillet dibekukan secara terpisah menggunakan hembusan udara sangat dingin (-40°C) di atas konveyor berjalan sehingga tidak saling menempel (catatan: spesifikasi detail kecepatan udara dan suhu koil tiap pabrik diverifikasi pada katalog vendor dan SNI 4110:2020).'
               },
               {
                 topic: 'Glazing & Freezer Burn (Pelapisan Es & Luka Bakar Beku)',
@@ -578,41 +587,41 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
               }
             ],
             todos: [
-              'Pelajari cara mengukur persentase glazing (de-glazing test) dan Net Weight (berat bersih tanpa es) sesuai standar ekspor.',
+              'Pelajari cara mengukur persentase glazing (de-glazing test SNI 2372-8:2019) dan Net Weight (berat bersih tanpa es) sesuai standar ekspor.',
               'Bandingkan kapan pabrik memakai Contact Plate Freezer vs ABF vs IQF.'
             ],
             output: 'Diagram alir proses pembekuan udang HLSO / PTO standar pabrik ekspor.',
             tips: 'Semua pabrik pengolahan udang dan ikan ekspor di Surabaya, Tarakan, dan Makassar menggunakan mesin CPF, ABF, dan IQF.'
           },
           {
-            id: 'p2-sub-coldstorage-thawing',
+            id: 'p2-sub-map-coldstorage',
             category: 'subbranch',
             badgeText: 'SUB-CABANG 2.7',
-            badgeType: 'global',
-            title: 'Manajemen Cold Storage & Teknik Thawing Higienis',
-            subtitle: 'Mencegah fluktuasi suhu gudang beku & menjaga mutu saat pelelehan',
-            keywords: 'cold storage FIFO FEFO temperature data logger thawing seafood',
+            badgeType: 'leverage',
+            title: 'Modified Atmosphere Packaging (MAP) & Manajemen Gudang Beku',
+            subtitle: 'Memperpanjang umur simpan fillet tuna dari 2 hari menjadi 18 hari tanpa pengawet',
+            keywords: 'MAP Modified Atmosphere Packaging CO2 N2 gas flushing vacuum gas injection',
             visualSteps: [
-              'Penataan palet berjarak dari dinding & langit-langit agar sirkulasi udara dingin merata',
-              'Pencatatan suhu otomatis 24 jam (Data Logger) & sistem rotasi barang FEFO (First Expired First Out)',
-              'Thawing terkontrol pada suhu chiller (0°C – 4°C) atau air mengalir dingin < 15°C (dilarang pakai air panas!)'
+              'Metode MAP: Gas Flushing (produksi cepat) vs Vacuum + Gas Injection (residu O2 sangat rendah & presisi)',
+              'Formulasi Gas & Rasio V/W 2,5:1: Fillet Tuna (50% N2 : 50% CO2) | Otak-Otak (5% O2 : 35% CO2 : 60% N2)',
+              'Syarat Mutlak FAO: Kemasan MAP wajib disimpan pada suhu mendekati 0°C sepanjang rantai distribusi'
             ],
             syllabus: [
               {
-                topic: 'Recrystallization (Rekristalisasi Es Akibat Fluktuasi Suhu)',
-                detail: 'Jika pintu cold storage sering dibuka sehingga suhu naik-turun, kristal es kecil akan mencair sebagian lalu menyatu membentuk kristal es raksasa yang merusak tekstur daging ikan.'
+                topic: 'Modified Atmosphere Packaging / MAP (Kemasan Atmosfer Termodifikasi)',
+                detail: 'Penggantian udara ambien di dalam kemasan kedap udara dengan campuran CO2, N2, dan sedikit O2 menggunakan metode gas flushing atau vacuum + gas injection. Riset menunjukkan rasio volume gas terhadap berat produk (V/W) 2,5:1 dengan komposisi 50% N2 : 50% CO2 memperpanjang umur simpan fillet tuna dari 2 hari (kontrol) menjadi 18 hari, sedangkan 5% O2 : 35% CO2 : 60% N2 optimal pada otak-otak ikan.'
               },
               {
-                topic: 'Controlled Thawing (Pelelehan Terkendali)',
-                detail: 'Proses mencairkan ikan beku secara perlahan pada suhu dingin (< 4°C) agar air hasil lelehan sempat diserap kembali oleh serat protein otot dan bakteri tidak sempat berkembang.'
+                topic: 'Cold Storage Recrystallization & FAO Temperature Mandate',
+                detail: 'FAO menegaskan seluruh manfaat MAP hilang bila suhu rantai distribusi naik; produk MAP wajib dijaga mendekati 0°C untuk mencegah pertumbuhan patogen anaerob. Pada gudang beku (-20°C), fluktuasi suhu memicu rekristalisasi es yang merusak serat daging.'
               }
             ],
             todos: [
-              'Hitung kapasitas penyimpanan Cold Storage berdasarkan berat jenis tumpukan master carton ikan/udang.',
-              'Pelajari fungsi Tirai Plastik (Air Curtain / Strip Curtain) dan Ruang Antara (Anteroom) di gudang beku.'
+              'Rancang percobaan pengemasan MAP dengan metode vacuum + gas injection (rasio V/W 2,5:1, komposisi 50% CO2 : 50% N2) pada suhu mendekati 0°C dan bandingkan umur simpannya terhadap kemasan konvensional.',
+              'Pelajari sistem rotasi gudang FEFO (First Expired First Out) dan pencatatan suhu otomatis (Data Logger).'
             ],
-            output: 'Checklist inspeksi harian gudang Cold Storage dan SOP thawing pabrik.',
-            tips: 'Kenaikan suhu Cold Storage di atas -18°C selama pengiriman kontainer adalah alasan klaim ganti rugi terbesar dari buyer luar negeri.'
+            output: 'Laporan eksperimen umur simpan kemasan MAP dan checklist inspeksi harian gudang dingin.',
+            tips: 'Teknologi MAP memungkinkan pengiriman fillet ikan segar berkualitas tinggi ke hotel dan restoran modern tanpa perlu dibekukan!'
           }
         ]
       }
@@ -631,11 +640,11 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
       badgeType: 'samarinda',
       title: 'Teknologi Pengolahan & Diversifikasi Produk',
       subtitle: 'Mengubah bahan baku mentah murah menjadi produk pangan bernilai tambah tinggi',
-      keywords: 'seafood value added product processing surimi canning shelf life',
+      keywords: 'seafood value added product processing surimi canning shelf life ASLT',
       visualSteps: [
         'Bahan Baku Ikan Utuh (Margin Tipis & Cepat Busuk)',
         'Proses Pemisahan Daging (Fillet / Surimi) + Teknologi Pengawetan Termal / Non-Termal',
-        'Uji Sensori & Penentuan Umur Simpan → Produk Siap Ritel Modern & Ekspor'
+        'Uji Sensori (SNI 2346:2015) & Penentuan Umur Simpan (ASLT) → Produk Siap Ritel & Ekspor'
       ],
       syllabus: [
         {
@@ -753,7 +762,7 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
             ],
             todos: [
               'Bandingkan kurva laju pengeringan ikan menggunakan penjemuran matahari terbuka vs alat pengering kabinet (Cabinet Dryer).',
-              'Pelajari cara mengukur kadar garam (metode Mohr) dan aktivitas air (Aw meter) pada ikan kering.'
+              'Pelajari cara mengukur kadar garam (SNI 01-2359:1991) dan aktivitas air (Aw meter) pada ikan kering.'
             ],
             output: 'SOP produksi ikan asin rendah garam (low-salt) kemasan vakum higienis.',
             tips: 'Ikan asin jambal roti dan terasi udang khas Kalimantan yang dikemas higienis laku keras di supermarket Jakarta dan pasar ekspor!'
@@ -783,7 +792,7 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
             ],
             todos: [
               'Uji kadar lemak dan masa simpan amplang yang digoreng biasa vs menggunakan spinner & nitrogen flushing.',
-              'Rancang varian rasa modern (misal: Rumput Laut, Pedas Daun Jeruk, Keju) dengan klaim Tinggi Protein.'
+              'Rancang varian rasa modern (misal: Rumput Laut Pulau Tihi-Tihi, Pedas Daun Jeruk, Keju) dengan klaim Tinggi Protein.'
             ],
             output: 'Formulasi perbaikan mutu dan umur simpan produk amplang / snack ikan khas Samarinda.',
             tips: 'Ribuan UMKM amplang di Samarinda masih memakai cara tradisional dan cepat tengik dalam 1 bulan—di sinilah ilmu THP-mu bisa memonopoli kualitas!'
@@ -799,7 +808,7 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
         badgeType: 'global',
         title: 'Pengalengan (Thermal), Kemasan Cerdas & Uji Mutu',
         subtitle: 'Membuat produk ikan tahan 1–2 tahun di suhu ruang & memvalidasi umur simpannya',
-        keywords: 'fish canning retort sterilization F0 value MAP shelf life sensory',
+        keywords: 'fish canning retort sterilization F0 value liquid smoke shelf life sensory',
         visualSteps: [
           'Pengisian ikan & saus ke kaleng/retort pouch → Penghampaan udara (Exhausting)',
           'Penutupan kedap udara (Double Seaming) → Sterilisasi komersial di mesin Retort (121°C)',
@@ -831,18 +840,18 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
             category: 'subbranch',
             badgeText: 'SUB-CABANG 3.4',
             badgeType: 'global',
-            title: 'Vacuum Packaging, MAP & Asap Cair',
+            title: 'Vacuum Packaging, Edible Coating Kitosan & Asap Cair',
             subtitle: 'Teknologi pengawetan modern untuk ritel supermarket & ekspor',
-            keywords: 'Modified Atmosphere Packaging liquid smoke pyrolysis fish',
+            keywords: 'chitosan edible coating 1% acetic acid liquid smoke pyrolysis vacuum pack',
             visualSteps: [
               'Vacuum Pack: Menyedot seluruh oksigen (O2) untuk mematikan bakteri aerob & cegah tengik',
-              'MAP: Mengganti udara kemasan dengan kombinasi gas CO2 (hambat bakteri) + N2 (penyangga)',
+              'Edible Coating Kitosan: Pelapisan larutan kitosan dalam asam asetat encer 1% (perpanjang umur simpan udang segar +2 hari)',
               'Liquid Smoke: Pirolisis tempurung kelapa/kayu ulin → Destilasi asap bebas tar karsinogenik'
             ],
             syllabus: [
               {
-                topic: 'MAP (Modified Atmosphere Packaging)',
-                detail: 'Pengemasan produk segar dengan memodifikasi komposisi gas di dalam kemasan (biasanya tinggi CO2 40–60% dan N2) untuk memperpanjang umur simpan fillet ikan segar di supermarket.'
+                topic: 'Chitosan Antimicrobial Coating (Pelapis Edibel Kitosan)',
+                detail: 'Gugus amino bermuatan positif (NH3+) pada larutan kitosan dalam asam asetat 1% mampu mendepolarisasi membran sel bakteri pembusuk bermuatan negatif sehingga memperpanjang kesegaran fisik udang putih segar selama 2 hari dibanding kontrol.'
               },
               {
                 topic: 'Liquid Smoke / Asap Cair (Pirolisis)',
@@ -855,28 +864,28 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
             ],
             todos: [
               'Bandingkan masa simpan ikan bandeng/patin asap tradisional vs menggunakan asap cair grade 1.',
-              'Pelajari spesifikasi ketebalan (mikron) plastik vakum untuk produk beku vs produk kering.'
+              'Uji efektivitas pelapisan larutan kitosan 1% dalam asam asetat pada kesegaran udang putih/windu di suhu dingin.'
             ],
-            output: 'Analisis perbandingan umur simpan produk kemasan vakum vs biasa.',
-            tips: 'Ikan asap modern kemasan vakum sangat diminati pasar diaspora Indonesia dan ritel modern.'
+            output: 'Analisis perbandingan umur simpan produk kemasan vakum & edible coating kitosan vs kontrol.',
+            tips: 'Ikan asap modern kemasan vakum dan udang berlapis edible coating kitosan adalah inovasi alami yang sangat disukai pasar ekspor bebas bahan pengawet sintetis.'
           },
           {
             id: 'p3-sub-sensori-aslt',
             category: 'subbranch',
             badgeText: 'SUB-CABANG 3.5',
             badgeType: 'global',
-            title: 'Uji Sensori (Organoleptik) & Penentuan Umur Simpan (ASLT)',
+            title: 'Uji Sensori (SNI 2346:2015) & Penentuan Umur Simpan (ASLT)',
             subtitle: 'Membuktikan secara ilmiah produkmu enak dan tahan simpan 12 bulan untuk izin BPOM',
-            keywords: 'sensory evaluation hedonic test score sheet SNI ASLT Arrhenius shelf life',
+            keywords: 'SNI 2346 sensory evaluation hedonic test ASLT Arrhenius shelf life',
             visualSteps: [
-              'Uji Score Sheet SNI (Skala 1–9: Mata, Insang, Lendir, Daging, Bau, Tekstur ikan segar)',
+              'Uji Score Sheet SNI 2346:2015 (Skala 1–9: Mata, Insang, Lendir, Daging, Bau, Tekstur ikan segar)',
               'Uji Hedonik (Tingkat kesukaan konsumen 30–50 panelis) & Uji Segitiga (Triangle Test)',
               'Simulasi ASLT (Accelerated Shelf-Life Testing) pada suhu ekstrem untuk hitung tanggal kadaluarsa'
             ],
             syllabus: [
               {
-                topic: 'Organoleptic Score Sheet SNI (Lembar Penilaian Sensori)',
-                detail: 'Standar pengujian mutu ikan segar menggunakan panca indra manusia terlatih (skala 1–9). Ikan segar layak konsumsi dan ekspor wajib memiliki nilai minimal 7.'
+                topic: 'Organoleptic Score Sheet SNI 2346:2015 (Lembar Penilaian Sensori)',
+                detail: 'Standar pengujian mutu ikan segar menggunakan panca indra manusia terlatih (skala 1–9). Ikan segar layak konsumsi dan ekspor wajib memiliki nilai minimal 7 (rata-rata tuna beku standar mencapai nilai 8 pada interval 7,60–8,40).'
               },
               {
                 topic: 'ASLT / Accelerated Shelf-Life Testing (Uji Umur Simpan Dipercepat)',
@@ -884,10 +893,10 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
               }
             ],
             todos: [
-              'Praktikkan penilaian Score Sheet SNI 2346 pada ikan segar di laboratorium THP.',
+              'Praktikkan penilaian Score Sheet SNI 2346:2015 pada ikan segar di laboratorium THP Unmul.',
               'Pelajari cara membuat grafik regresi linier Arrhenius di Microsoft Excel untuk menentukan tanggal Expired Date.'
             ],
-            output: 'Laporan uji organoleptik dan perhitungan tanggal kadaluarsa (Best Before) produk.',
+            output: 'Laporan uji organoleptik SNI 2346:2015 dan perhitungan tanggal kadaluarsa (Best Before) produk.',
             tips: 'Data uji umur simpan (ASLT) adalah salah satu syarat wajib saat mendaftarkan produk pangan olahan ke BPOM MD!'
           }
         ]
@@ -906,34 +915,34 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
       badgeText: 'FASE 4 • SEMESTER 5–6',
       badgeType: 'leverage',
       title: 'Bioteknologi Perairan & Zero-Waste (High-Margin)',
-      subtitle: 'Jalur "Crazy Rich" R&D: Mengekstrak limbah ikan jadi bahan baku farmasi & kosmetik',
-      keywords: 'marine biotechnology collagen chitosan extraction zero waste',
+      subtitle: 'Jalur "Crazy Rich" R&D: Parameter kimia presisi untuk ekstrak farmasi & kosmetik B2B',
+      keywords: 'marine biotechnology collagen chitosan extraction albumin FPH enzymatic hydrolysis',
       visualSteps: [
-        'Limbah Industri Perikanan (Kulit, Sisik, Tulang, Kepala, Cangkang Udang/Kepiting)',
-        'Proses Ekstraksi Kimiawi / Enzimatis / Fermentasi di Laboratorium Bioteknologi',
-        'Bahan Aktif Murni (Kolagen, Kitosan, Albumin, Omega-3, Karaginan) → Dijual B2B ke Pabrik Skincare & Farmasi'
+        'Limbah Industri Perikanan Kaltim (Cangkang Udang Windu, Kulit/Tulang Ikan, Ikan Gabus & Rucah)',
+        'Ekstraksi Presisi: Basa/Asam Dingin 4°C (Kolagen), Deasetilasi NaOH 60% (Kitosan), Enzim Alkalase 55°C (FPH)',
+        'Bahan Aktif B2B Terkarakterisasi (FTIR, %DD, %DH, Rendemen & Kadar Abu) → Dijual ke Pabrik Skincare & Farmasi'
       ],
       syllabus: [
         {
           topic: 'Zero-Waste Blue Economy (Ekonomi Biru Tanpa Limbah)',
-          detail: 'Konsep mengolah 100% bagian tubuh ikan. Dagingnya jadi makanan (40%), sedangkan 60% sisanya (kulit, tulang, jeroan, cangkang) diekstrak menjadi senyawa bernilai jual puluhan kali lipat.'
+          detail: 'Konsep mengolah 100% bagian tubuh ikan. Dagingnya jadi makanan (40%), sedangkan 60% sisanya (kulit, tulang, jeroan, cangkang udang Delta Mahakam) diekstrak menjadi senyawa bernilai jual puluhan kali lipat.'
         },
         {
-          topic: 'Bioactive Peptides & Enzymatic Hydrolysis (Peptida Bioaktif)',
-          detail: 'Rantai pendek asam amino hasil pemotongan protein ikan menggunakan enzim protease (seperti alcalase atau papain) yang memiliki fungsi antioksidan, antihipertensi, dan anti-aging.'
+          topic: 'Bioactive Peptides & Enzymatic Hydrolysis (Peptida Bioaktif 2–20 Asam Amino)',
+          detail: 'Rantai pendek asam amino (2–20 residu) hasil pemotongan protein ikan menggunakan enzim protease (Alkalase B. licheniformis atau Papain) yang memiliki fungsi antioksidan, antihipertensi, dan kelarutan air 99,94–99,99%.'
         },
         {
           topic: 'Nutraceuticals & Cosmeceuticals (Nutrasetika & Kosmesetika)',
-          detail: 'Produk pangan atau ekstrak bahan alam yang memiliki manfaat medis klinis (suplemen kesehatan) maupun efek aktif perawatan kulit tingkat medis.'
+          detail: 'Produk pangan atau ekstrak bahan alam yang memiliki manfaat medis klinis (suplemen albumin serum dewasa 3,5–5,5 g/dL) maupun efek aktif perawatan kulit tingkat medis.'
         }
       ],
       todos: [
         'Dekati dosen di FPIK Unmul yang memiliki riset/paten terkait ekstraksi albumin, kolagen, karaginan, atau kitosan.',
-        'Jadikan topik ekstraksi bioteknologi ini sebagai judul Skripsi agar fasilitas & bahan lab ditanggung proyek penelitian.',
-        'Pelajari metode karakterisasi bahan aktif modern: FTIR (gugus fungsi), SDS-PAGE (berat molekul protein), dan SEM (morfologi permukaan).'
+        'Jadikan topik ekstraksi bioteknologi dengan parameter kimia terukur ini sebagai judul Skripsi agar fasilitas & bahan lab ditanggung proyek penelitian.',
+        'Pelajari metode karakterisasi bahan aktif modern: FTIR (bilangan gelombang amida 1655 cm⁻¹ & hidroksil 3450 cm⁻¹ untuk %DD), SDS-PAGE, dan uji viskositas.'
       ],
-      output: 'Sampel ekstrak murni (albumin / kolagen / kitosan / minyak ikan) hasil riset skripsi beserta uji karakteristiknya.',
-      tips: 'Menjual kerupuk ikan untungnya ribuan rupiah per bungkus; menjual ekstrak kolagen peptida atau albumin murni ke pabrik maklon skincare/farmasi nilainya ratusan juta per kontrak.'
+      output: 'Tiga prototipe bahan aktif B2B skala lab (kitosan udang windu abu <0,1%, ekstrak albumin ikan gabus, dan serbuk FPH kelarutan >99%) beserta Technical Data Sheet.',
+      tips: 'Pembeli industri kosmetik dan farmasi tidak membeli klaim umum; mereka membeli konsistensi spesifikasi—seperti %DD kitosan ≥70% dengan kadar abu mendekati nol, kekuatan gel gelatin, atau kelarutan FPH >99%.'
     },
     left: [
       {
@@ -942,32 +951,32 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
         badgeText: '💊 FARMASI & NUTRASETIKA',
         badgeType: 'leverage',
         title: 'Ekstraksi Albumin Ikan Gabus & Pemurnian Minyak Ikan',
-        subtitle: 'Memanfaatkan komoditas melimpah Sungai Mahakam untuk industri kesehatan',
-        keywords: 'Channa striata albumin extraction BCG method fish oil refining',
+        subtitle: 'Protokol suhu terkontrol waterbath 40°C (rendemen 18,55%) vs perebusan singkat 10 menit',
+        keywords: 'Channa striata albumin extraction waterbath 40C Lowry BCG fish oil refining',
         visualSteps: [
-          'Daging ikan gabus dikukus/diekstrak vakum suhu rendah (< 50°C agar protein tidak rusak)',
-          'Pemisahan lemak dan cairan ekstrak → Pengeringan semprot (Spray Drying) jadi serbuk albumin',
-          'Uji kadar albumin dengan metode Bromocresol Green (BCG) → Dikemas jadi kapsul / suplemen'
+          'Fillet daging ikan gabus tanpa kulit dihaluskan + akuades rasio 1:1',
+          'Ekstraksi Termal Terkontrol: Waterbath 40°C (30–45 mnt) atau Perebusan 10 mnt → Penyaringan',
+          'Pengeringan Vakum / Spray Drying → Uji Kadar Albumin (Lowry / BCG) → Kapsul & Minuman Kesehatan'
         ],
         syllabus: [
           {
-            topic: 'Protein Denaturation (Denaturasi Protein)',
-            detail: 'Rusaknya struktur 3 dimensi protein akibat panas berlebih (> 60°C) atau pH ekstrem sehingga albumin menggumpal dan kehilangan fungsi biologisnya.'
+            topic: 'Controlled Thermal Extraction of Snakehead Albumin (Ekstraksi Albumin Channa striata)',
+            detail: 'Ekstraksi waterbath suhu 40°C selama 30–45 menit menghasilkan rendemen 18,55%, kadar albumin 9,76%, dan kadar protein 10,39%. Pada studi metode pemanasan rasio 1:1, perebusan singkat 10 menit mencatat kadar albumin ekstrak tertinggi 47,01 ± 1,05 %b/b (uji Lowry) dibanding dua metode pembanding lain.'
           },
           {
-            topic: 'Spray Drying & Freeze Drying (Pengeringan Semprot & Beku)',
-            detail: 'Teknik mengubah ekstrak cair menjadi serbuk halus dalam hitungan detik menggunakan kabut udara panas terkontrol (Spray Drying) atau sublimasi vakum suhu beku (Freeze Drying) agar bioaktivitas tetap utuh.'
+            topic: 'Clinical Target & Sensory Formulation (Target Klinis & Formulasi Minuman)',
+            detail: 'Albumin terkoagulasi pada suhu tinggi sehingga pengeringan memakai vacuum/spray drying. Suplementasi ditujukan memenuhi albumin serum dewasa normal 3,5–5,5 g/dL (batas pencegahan hipoalbuminemia 4 g/dL), sedangkan formulasi minuman kesehatan diuji hingga 80°C dengan skor hedonik 5.'
           },
           {
-            topic: 'Bromocresol Green / BCG Method (Uji Kadar Albumin)',
-            detail: 'Metode spektrofotometri standar untuk mengukur konsentrasi albumin murni secara akurat berdasarkan ikatan spesifik warna hijau-biru pada panjang gelombang 628 nm.'
+            topic: 'Bromocresol Green / BCG & Lowry Assay (Uji Kuantitatif Albumin)',
+            detail: 'Metode spektrofotometri standar untuk mengukur konsentrasi albumin murni secara akurat pada panjang gelombang 628 nm (BCG) atau reagen Folin-Ciocalteu (Lowry).'
           }
         ],
         todos: [
-          'Pelajari metode ekstraksi albumin ikan gabus dengan pelarut air vs asam lemah.',
-          'Hitung rendemen serbuk albumin dari 10 kg ikan gabus segar dan hitung nilai jualnya di pasaran.'
+          'Lakukan ekstraksi albumin ikan gabus (Channa striata) pada suhu terkontrol waterbath 40°C (30–45 menit) serta bandingkan kadar protein dan rendemennya terhadap metode perebusan singkat 10 menit.',
+          'Hitung rendemen serbuk albumin kering dari 10 kg ikan gabus segar DAS Mahakam dan kalkulasi biaya produksinya.'
         ],
-        output: 'Prototipe serbuk / kapsul ekstrak albumin ikan gabus Mahakam.',
+        output: 'Prototipe serbuk / kapsul ekstrak albumin ikan gabus Mahakam terkarakterisasi.',
         tips: 'Suplemen kapsul albumin ikan gabus sudah diresepkan luas oleh dokter bedah di rumah sakit seluruh Indonesia.',
         subBranches: [
           {
@@ -976,28 +985,28 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
             badgeText: 'SUB-CABANG 4.1',
             badgeType: 'leverage',
             title: 'Pemurnian Minyak Ikan (Refining) & Konsentrat Omega-3',
-            subtitle: 'Mengubah lemak perut ikan patin & limbah kepala ikan menjadi minyak farmasi',
-            keywords: 'fish oil refining degumming neutralization bleaching deodorization Omega-3',
+            subtitle: 'Tahapan degumming, refining & bleaching karbon aktif (perlu validasi parameter lab)',
+            keywords: 'fish oil refining degumming neutralization bleaching activated carbon Omega-3',
             visualSteps: [
-              'Wet Rendering (Ekstraksi minyak kasar dari lemak perut patin/kepala ikan)',
-              '4 Tahap Pemurnian: Degumming (buang getah) → Neutralization (buang asam lemak bebas)',
-              'Bleaching (pemucatan warna dengan adsorben) → Deodorization (penghilangan bau amis)'
+              'Wet Rendering (Ekstraksi minyak kasar dari lemak perut patin/limbah kepala ikan)',
+              'Pemurnian 3 Tahap Utama: Degumming (buang getah fosfolipid) → Refining/Netralisasi (buang FFA)',
+              'Bleaching dengan Karbon Aktif (pemucatan & penghilangan bau amis) → Uji PV, FFA & Profil EPA/DHA'
             ],
             syllabus: [
               {
-                topic: 'Oil Refining Process (Degumming, Neutralization, Bleaching, Deodorization)',
-                detail: 'Rangkaian pemurnian minyak ikan kasar (crude fish oil) untuk menghilangkan fosfolipid, asam lemak bebas (FFA), pigmen gelap, dan senyawa volatil penyebab bau amis.'
+                topic: 'Fish Oil Refining Stages (Tahapan Pemurnian Minyak Ikan)',
+                detail: 'Meliputi degumming, refining (netralisasi asam lemak bebas), dan bleaching menggunakan adsorben karbon aktif untuk menjernihkan warna serta mengurangi bau amis minyak ikan kasar dari limbah pengolahan.'
               },
               {
-                topic: 'TOTOX Value (Total Oxidation Value)',
-                detail: 'Indeks standar internasional mutu minyak ikan (gabungan nilai Peroksida dan Anisidin). Minyak ikan grade farmasi wajib memiliki nilai TOTOX di bawah 26.'
+                topic: 'Lab Validation Note & TOTOX Benchmark (Catatan Validasi Lab & Standar TOTOX)',
+                detail: 'Catatan teknis: karena variasi asam lemak tiap spesies ikan berbeda, parameter suhu reaksi, dosis asam/basa, serta persentase EPA/DHA spesifik wajib divalidasi langsung di laboratorium dan dibandingkan terhadap standar TOTOX < 26.'
               }
             ],
             todos: [
-              'Praktikkan pemurnian minyak ikan patin menggunakan bentonit/zeolit sebagai bahan pemucat (bleaching earth).',
-              'Ukur angka asam (Acid Value) dan bilangan peroksida minyak sebelum dan sesudah pemurnian.'
+              'Susun rancangan uji pemurnian minyak ikan hasil samping melalui proses degumming, refining, dan bleaching karbon aktif.',
+              'Lakukan penelusuran literatur lanjutan untuk mengunci parameter suhu, dosis adsorben, dan profil EPA/DHA pada minyak ikan patin Kaltim.'
             ],
-            output: 'Sampel minyak ikan jernih tidak berbau amis siap uji parameter mutu SNI.',
+            output: 'Sampel minyak ikan jernih hasil bleaching karbon aktif dan matriks parameter uji mutu minyak.',
             tips: 'Pabrik fillet ikan patin membuang berton-ton lemak perut setiap minggu—kamu bisa membelinya super murah dan memurnikannya menjadi minyak Omega-3/Omega-9!'
           },
           {
@@ -1005,30 +1014,30 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
             category: 'subbranch',
             badgeText: 'SUB-CABANG 4.2',
             badgeType: 'leverage',
-            title: 'Hidrolisat Protein Ikan (FPH) & Kaldu Alami Industri',
-            subtitle: 'Memecah protein ikan rucah/sampingan menjadi peptida larut air bernilai tinggi',
-            keywords: 'fish protein hydrolysate FPH enzymatic hydrolysis degree of hydrolysis',
+            title: 'Hidrolisat Protein Ikan (FPH) Enzimatis (Kelarutan 99,99%)',
+            subtitle: 'Parameter presisi enzim Alkalase (20.000 U/kg) & Papain 5% vs risiko hidrolisis asam',
+            keywords: 'fish protein hydrolysate FPH Alcalase 20000 U/kg Papain 5% degree of hydrolysis',
             visualSteps: [
-              'Daging ikan sampingan/kepala ikan dicampur air + Enzim Protease (Papain / Bromelain / Alcalase)',
-              'Inkubasi pada suhu & pH optimum enzim (50°C, 4 jam) hingga protein terpotong menjadi peptida',
-              'Inaktivasi enzim (85°C) → Sentrifugasi → Dikeringkan jadi bubuk kaldu umami / suplemen protein'
+              'Substrat Ikan/Sampingan Fillet + Air (1:1 b/v) + Enzim Alkalase (20.000 U/kg) atau Papain 5% (b/v)',
+              'Inkubasi Terkontrol: Suhu 55–60°C, pH 7–8, waktu 6–7 jam (hindari suhu tinggi tak terkendali / Maillard)',
+              'Inaktivasi Enzim 90°C → Sentrifugasi → Bubuk FPH (Kelarutan 99,94–99,99%, Kecerahan L* 94,80)'
             ],
             syllabus: [
               {
-                topic: 'Degree of Hydrolysis / DH (Derajat Hidrolisis)',
-                detail: 'Persentase ikatan peptida protein yang berhasil diputus oleh enzim. Semakin tinggi nilai DH, semakin mudah protein tersebut diserap tubuh dan larut sempurna dalam air.'
+                topic: 'Enzymatic Hydrolysis Parameters (Parameter Hidrolisis Enzimatis Presisi)',
+                detail: 'Menggunakan rasio daging:air 1:1 (b/v) dengan enzim Alkalase (Bacillus licheniformis) dosis 20.000 U/kg substrat pada suhu 55–60°C (optimal 55–65°C), pH 7–8 selama 6–7 jam dan inaktivasi 90°C (menghasilkan kelarutan 99,94–99,99%, kecerahan L* 94,80, peptida 2–20 asam amino), atau enzim Papain 5% (b/v) selama 6 jam pada lele dumbo (%DH 35,37%, kadar protein serbuk 53,29%).'
               },
               {
-                topic: 'Natural Umami Peptides (Peptida Gurih Alami)',
-                detail: 'Asam glutamat dan peptida rantai pendek hasil hidrolisis ikan yang memberikan rasa gurih alami kuat sebagai pengganti MSG sintetis untuk industri bumbu makanan.'
+                topic: 'Enzymatic vs Acid Hydrolysis & Maillard Control',
+                detail: 'Hidrolisis enzimatik jauh lebih unggul daripada hidrolisis kimia asam suhu ekstrem (121–138°C selama 2–8 jam) yang mengoksidasi sistein dan metionin serta merusak serin dan treonin. Kontrol suhu dan waktu juga mencegah pencoklatan non-enzimatis Maillard.'
               }
             ],
             todos: [
-              'Bandingkan efektivitas enzim papain (dari getah pepaya) vs bromelain (dari bonggol nanas) untuk menghidrolisis protein ikan.',
-              'Hitung HPP pembuatan bubuk kaldu ikan alami bebas MSG.'
+              'Produksi sampel FPH berbahan ikan air tawar atau hasil samping fillet menggunakan enzim Alkalase (20.000 U/kg substrat, pH 7–8, 55–60°C, 6–7 jam, inaktivasi 90°C) atau Papain 5% selama 6 jam.',
+              'Catat tingkat kelarutan air, derajat hidrolisis (%DH), kecerahan warna, dan kadar protein serbuknya.'
             ],
-            output: 'Formulasi bubuk Hidrolisat Protein Ikan (FPH) untuk suplemen atau penyedap alami.',
-            tips: 'Tren makanan sehat global sedang meninggalkan MSG sintetis dan beralih ke ekstrak kaldu ikan alami (Natural Seafood Extract).'
+            output: 'Formulasi bubuk Hidrolisat Protein Ikan (FPH) kelarutan >99% untuk suplemen atau penyedap alami.',
+            tips: 'Tren makanan sehat global sedang meninggalkan MSG sintetis dan beralih ke ekstrak kaldu ikan alami (Natural Seafood Extract) dengan kelarutan air tinggi.'
           }
         ]
       }
@@ -1039,92 +1048,94 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
         category: 'branch',
         badgeText: '✨ KOSMETIK & BIOPOLIMER',
         badgeType: 'leverage',
-        title: 'Kolagen Sisik/Kulit Ikan, Kitosan & Hidrokoloid',
-        subtitle: 'Menjadi pemasok bahan baku (B2B Ingredient Supplier) pabrik skincare & makanan',
-        keywords: 'fish scale collagen extraction chitosan degree of deacetylation',
+        title: 'Kolagen Kulit Ikan (4°C), Gelatin & Kitosan Udang Windu',
+        subtitle: 'Resep kimiawi teruji dari cangkang udang Delta Mahakam & kulit ikan air tawar',
+        keywords: 'fish skin collagen NaOH 0.05M acetic acid 4C chitosan NaOH 60% microwave DD 85%',
         visualSteps: [
-          'Kulit & Sisik Ikan (Kakap/Patin) → Direndam NaOH & Asam Asetat → Ekstrak Kolagen Halal',
-          'Cangkang Udang/Kepiting → Deproteinasi (NaOH) + Demineralisasi (HCl) → Kitin → Kitosan',
-          'Rumput Laut Kaltim → Ekstraksi Alkali → Karaginan & Alginat (Pengental Industri)'
+          'Kolagen Kulit Ikan: Pre-treatment NaOH 0,05 M → Ekstraksi Asam Asetat 0,25–0,75 M (1:10 b/v) suhu 4°C (16–72 jam)',
+          'Kitosan Cangkang Udang Windu: Deproteinasi NaOH → Demineralisasi HCl → Deasetilasi NaOH 60% (40–50°C, 4 jam)',
+          'Karakterisasi Mutu: Uji FTIR (%DD hingga 85,32%), Kadar Abu (0,04%), Viskositas (3,53 cP) & Kekuatan Gel'
         ],
         syllabus: [
           {
-            topic: 'Acid-Soluble Collagen / ASC (Kolagen Larut Asam)',
-            detail: 'Kolagen murni yang diekstrak dari kulit atau sisik ikan menggunakan asam asetat pada suhu dingin (4°C). Keunggulannya adalah 100% halal dan bebas risiko penyakit sapi gila.'
+            topic: 'Acid-Soluble Collagen Extraction at 4°C (Ekstraksi Kolagen Kulit Ikan)',
+            detail: 'Kulit ikan patin direndam basa lemah NaOH 0,05 M hingga pH netral lalu diekstrak dengan asam asetat (CH3COOH) 0,25–0,75 M rasio 1:10 (b/v) selama 16–72 jam pada suhu dingin ~4°C agar tidak terdegradasi menjadi gelatin. Kulit nila hitam (asam asetat 0,75 M, 16 jam) menghasilkan rendemen 5,96% dengan suhu denaturasi 35,75°C (kulit kakap mencapai 8,1% bk).'
           },
           {
-            topic: 'Degree of Deacetylation / DD (Derajat Deasetilasi Kitosan)',
-            detail: 'Persentase gugus asetil yang berhasil dihilangkan dari kitin menjadi kitosan (diukur dengan alat FTIR). Kitosan berkualitas industri wajib memiliki nilai DD > 75–85%.'
+            topic: 'Shrimp Shell Chitosan Synthesis & FTIR %DD (Sintesis Kitosan & Derajat Deasetilasi)',
+            detail: 'Tahapan: (1) Deproteinasi NaOH 3,5% atau 1 M (80–90°C, 1 jam atau 40–50°C, 4 jam); (2) Demineralisasi HCl 1–1,5 M atau 2 M (melarutkan CaCO3); (3) Deasetilasi NaOH 60% rasio 1:20 (b/v), 40–50°C, 4 jam, 50 rpm. Pada udang windu menghasilkan rendemen 78,03%, air 4%, abu 0,04%, viskositas 3,53 cP, dan adsorpsi logam Cu 100 ppm sebesar 90,37%.'
+          },
+          {
+            topic: 'Microwave-Assisted Deacetylation (Deasetilasi Gelombang Mikro Cepat)',
+            detail: 'Metode gelombang mikro mempercepat pemutusan gugus asetil (-NHCOCH3) menjadi gugus amino bebas (-NH2): NaOH 50% (60°C, 3 menit) menghasilkan DD 69,80% dan NaOH 70% (70°C, 15 menit) mencapai DD 85,32% berdasarkan pembacaan puncak FTIR 1655 cm⁻¹ dan 3450 cm⁻¹.'
           }
         ],
         todos: [
-          'Praktikkan isolasi kitin dan kitosan dari limbah kepala/kulit udang tambak Delta Mahakam.',
-          'Pelajari cara membaca spektrum gugus fungsi menggunakan alat FTIR.'
+          'Lakukan ekstraksi kitin dan kitosan skala lab dari limbah cangkang udang windu (P. monodon) Delta Mahakam menggunakan NaOH 60% (40–50°C, 4 jam), lalu ukur rendemen, air, abu, dan viskositas.',
+          'Bandingkan efisiensi energi deasetilasi konvensional vs microwave (NaOH 50%, 60°C, 3 menit) dan kirim sampel untuk pembacaan derajat deasetilasi FTIR.'
         ],
-        output: 'Sampel kitosan atau kolagen ikan lengkap dengan data uji FTIR dan kelarutan.',
-        tips: 'Industri kosmetik di Jawa sangat membutuhkan pasokan kolagen ikan halal lokal untuk menggantikan kolagen impor.',
-        subBranches: [
+        output: 'Sampel kitosan udang windu (abu 0,04%) dan kolagen kulit ikan lengkap dengan data uji FTIR & kelarutan.',
+        tips: 'Kitosan dengan kadar abu 0,04% dan DD >85% bernilai berkali-kali lipat dibanding kitosan pertanian biasa karena memenuhi spesifikasi kosmetik dan pengolahan limbah logam berat (adsorpsi Cu 90,37%)!'
+      },
+      {
+        id: 'p4-sub-gelatin-kolagen',
+        category: 'branch',
+        badgeText: 'SUB-CABANG 4.3',
+        badgeType: 'leverage',
+        title: 'Gelatin Halal Tulang (HCl 3%) & Kulit Ikan (55°C, 4 Jam)',
+        subtitle: 'Parameter demineralisasi tulang & ekstraksi termal kulit untuk kapsul dan pangan',
+        keywords: 'fish gelatin HCl 3% demineralization 55C 4 hours gel strength 13.5 N viscosity 7.66 cP',
+        visualSteps: [
+          'Tulang Ikan: Demineralisasi dengan HCl 3% → Ekstraksi Termal → Rendemen 7,92% (Air 1,75%, Abu 1,51%)',
+          'Kulit Ikan (misal Ikan Anggoli): Perlakuan Asam/Basa → Ekstraksi Suhu 55°C selama 4 Jam',
+          'Karakterisasi Mutu: Rendemen 14,36%, Kekuatan Gel 13,5 N, Viskositas 7,66 cP, Titik Gel 11°C, Titik Leleh 25,6°C'
+        ],
+        syllabus: [
           {
-            id: 'p4-sub-gelatin-kolagen',
-            category: 'subbranch',
-            badgeText: 'SUB-CABANG 4.3',
-            badgeType: 'leverage',
-            title: 'Kolagen Peptida & Gelatin Halal Tulang/Kulit Ikan',
-            subtitle: 'Bahan baku minuman kecantikan (collagen drink) & cangkang kapsul halal',
-            keywords: 'fish gelatin bloom strength collagen peptide cosmetic ingredient',
-            visualSteps: [
-              'Pre-treatment kulit/tulang ikan dengan basa lemah (NaOH) & asam untuk buang lemak/mineral',
-              'Ekstraksi air hangat (55–65°C) untuk mendapatkan Gelatin, atau lanjut enzim untuk Kolagen Peptida',
-              'Uji Kekuatan Gel (Bloom Strength) & Viskositas sesuai standar farmasi/kosmetik'
-            ],
-            syllabus: [
-              {
-                topic: 'Gelatin Bloom Strength (Kekuatan Gel Gelatin)',
-                detail: 'Satuan standar industri (dalam gram Bloom) untuk mengukur kekerasan dan elastisitas gel gelatin. Gelatin cangkang kapsul keras membutuhkan nilai 200–250 Bloom.'
-              },
-              {
-                topic: 'Low Molecular Weight Collagen Peptide (< 3000 Dalton)',
-                detail: 'Kolagen ikan yang telah dipecah menjadi ukuran molekul sangat kecil (< 3 kDa) sehingga larut jernih di air dingin dan langsung diserap usus untuk minuman kecantikan.'
-              }
-            ],
-            todos: [
-              'Pelajari perbedaan suhu denaturasi (thermal stability) kolagen ikan air hangat (patin/kakap) vs ikan laut dalam.',
-              'Cari daftar pabrik maklon minuman kolagen dan skincare di Indonesia sebagai calon buyer B2B.'
-            ],
-            output: 'Protokol ekstraksi gelatin dan kolagen peptida dari limbah kulit/tulang ikan Kaltim.',
-            tips: 'Pasar minuman kolagen dan skincare halal di Indonesia tumbuh miliaran dolar—hampir semua bahannya masih impor!'
+            topic: 'Bone Demineralization & Skin Thermal Extraction (Demineralisasi Tulang & Ekstraksi Kulit)',
+            detail: 'Demineralisasi tulang ikan memakai HCl 3% menghasilkan gelatin dengan rendemen 7,92%, kadar air 1,75%, dan kadar abu 1,51%. Ekstraksi kulit ikan pada suhu 55°C selama 4 jam menghasilkan rendemen 14,36%, kekuatan gel 13,5 N, viskositas 7,66 cP, titik gel 11°C, titik leleh 25,6°C, dan pH 6,83.'
           },
           {
-            id: 'p4-sub-rumputlaut',
-            category: 'subbranch',
-            badgeText: 'SUB-CABANG 4.4',
-            badgeType: 'samarinda',
-            title: 'Ekstraksi Karaginan & Alginat Rumput Laut Kaltim',
-            subtitle: 'Hilirisasi rumput laut Paser, Bontang & Berau menjadi Semi-Refined Carrageenan (SRC)',
-            keywords: 'carrageenan extraction KOH Kappaphycus alvarezii gel strength',
-            visualSteps: [
-              'Rumput laut kering Eucheuma cottonii dicuci bersih dari garam & pasir',
-              'Pemasakan dalam larutan Alkali (KOH 6–8%) pada suhu 80°C selama 2 jam',
-              'Pencucian netral → Pemotongan (Chopping) → Pengeringan & Penepungan (Tepung SRC)'
-            ],
-            syllabus: [
-              {
-                topic: 'Alkali Treatment / KOH Modification (Modifikasi Alkali Kalium Hidroksida)',
-                detail: 'Proses pemasakan rumput laut dengan KOH yang mengubah struktur molekul prekursor menjadi kappa-karaginan murni sehingga kekuatan gelnya meningkat tajam.'
-              },
-              {
-                topic: 'SRC vs RC (Semi-Refined vs Refined Carrageenan)',
-                detail: 'SRC adalah tepung karaginan yang masih mengandung selulosa dinding sel (dipakai industri sosis/bakso/pakan hewan), sedangkan RC adalah ekstrak murni yang diendapkan dengan alkohol/KCl (dipakai industri farmasi & es krim).'
-              }
-            ],
-            todos: [
-              'Praktikkan ekstraksi karaginan di lab THP Unmul dan ukur kekuatan gel serta viskositasnya.',
-              'Pelajari rantai pasok rumput laut di Kabupaten Paser, Berau, dan Tarakan.'
-            ],
-            output: 'Sampel tepung Semi-Refined Carrageenan (SRC) standar industri pangan.',
-            tips: 'Indonesia adalah produsen rumput laut terbesar dunia, tetapi masih banyak mengekspor rumput laut mentah kering daripada tepung SRC.'
+            topic: 'Low Molecular Weight Collagen Peptide (< 3000 Dalton)',
+            detail: 'Gelatin/kolagen ikan yang dihidrolisis enzimatis lebih lanjut menjadi ukuran molekul < 3 kDa sehingga larut jernih di air dingin dan langsung diserap usus untuk minuman kecantikan halal.'
           }
-        ]
+        ],
+        todos: [
+          'Praktikkan ekstraksi gelatin tulang ikan (demineralisasi HCl 3%) vs kulit ikan (55°C, 4 jam) di laboratorium THP Unmul.',
+          'Ukur kekuatan gel, viskositas (cP), titik gel, dan titik leleh gelatin ikan air tawar Kaltim.'
+        ],
+        output: 'Protokol ekstraksi gelatin halal dari limbah kulit/tulang ikan Kaltim beserta data reologinya.',
+        tips: 'Pasar minuman kolagen dan cangkang kapsul halal di Indonesia tumbuh miliaran dolar—hampir semua bahannya masih impor!'
+      },
+      {
+        id: 'p4-sub-rumputlaut',
+        category: 'branch',
+        badgeText: 'SUB-CABANG 4.4',
+        badgeType: 'samarinda',
+        title: 'Hilirisasi Rumput Laut Bontang (4.185 Ton) & Karaginan SRC',
+        subtitle: 'Mengubah bahan baku Rp4.102/kg menjadi tepung Semi-Refined Carrageenan (SRC) & pangan fungsional',
+        keywords: 'carrageenan extraction KOH Kappaphycus alvarezii Bontang 4185 ton SRC',
+        visualSteps: [
+          'Pasokan Hulu Bontang (4.185 ton) & Paser (Rp4.102/kg) → Pencucian bersih dari garam & pasir',
+          'Pemasakan dalam larutan Alkali (KOH 6–8%) pada suhu 80°C selama 2 jam untuk modifikasi kappa-karaginan',
+          'Pencucian netral → Pemotongan → Pengeringan & Penepungan (Tepung SRC) / Pangan Fungsional'
+        ],
+        syllabus: [
+          {
+            topic: 'Alkali Treatment / KOH Modification (Modifikasi Alkali Kalium Hidroksida)',
+            detail: 'Proses pemasakan rumput laut merah (Eucheuma cottonii) dengan KOH yang mengubah struktur molekul prekursor menjadi kappa-karaginan murni sehingga kekuatan gelnya meningkat tajam.'
+          },
+          {
+            topic: 'SRC vs RC (Semi-Refined vs Refined Carrageenan)',
+            detail: 'SRC adalah tepung karaginan yang masih mengandung selulosa dinding sel (dipakai industri sosis/bakso/pakan hewan), sedangkan RC adalah ekstrak murni yang diendapkan dengan alkohol/KCl (dipakai industri farmasi & es krim).'
+          }
+        ],
+        todos: [
+          'Praktikkan ekstraksi karaginan di lab THP Unmul dan ukur kekuatan gel serta viskositasnya.',
+          'Pelajari rantai pasok rumput laut di Kota Bontang (4.185 ton), Kabupaten Paser, dan Berau.'
+        ],
+        output: 'Sampel tepung Semi-Refined Carrageenan (SRC) standar industri pangan.',
+        tips: 'Harga bahan baku rumput laut kering di Kaltim hanya sekitar Rp4.102/kg—mengolahnya menjadi tepung SRC atau pangan fungsional melipatgandakan nilainya secara drastis!'
       }
     ]
   },
@@ -1139,95 +1150,100 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
       category: 'spine',
       badgeText: 'FASE 5 • SEMESTER 6–7',
       badgeType: 'global',
-      title: 'Sertifikasi Mutu, HACCP & Wajib PKL Luar Kota',
-      subtitle: 'Mencuri sistem kerja pabrik ekspor raksasa & mengantongi lisensi wajib industri',
-      keywords: 'HACCP seafood certification GMP SSOP BRC FDA export',
+      title: 'Sertifikasi Mutu OSS-SIAPMUTU, HACCP & PKL Industri',
+      subtitle: 'Menguasai sistem terpadu Barantin–BPPMHKP & mencuri sistem kerja pabrik ekspor besar',
+      keywords: 'SKP PMMT HACCP SPDI SMKHP SIAPMUTU Barantin BPPMHKP Balikpapan',
       visualSteps: [
-        'Ambil Pelatihan & Sertifikasi HACCP + SPI (Sertifikat Pengolah Ikan) di Kampus',
-        'Keluar Kota untuk PKL / Magang di Pabrik Seafood Ekspor Besar (Surabaya / Sidoarjo / Bitung / Makassar)',
-        'Kuasai Audit Mutu Internasional & Bangun Koneksi dengan Manajer Pabrik / Buyer'
+        'Integrasi Sistem Nasional: OSS (SKP, PMMT/HACCP, SPDI) + Aplikasi SIAPMUTU & Sistem Terpadu Barantin–BPPMHKP',
+        'Koordinasi Teknis Regional: Balai PPMHKP / KIPM Balikpapan (Jl. Kolonel Syarifudin Yoes No. 10)',
+        'Wajib PKL / Magang di Pabrik Seafood Ekspor Besar (Surabaya / Sidoarjo / Bitung / Makassar / Tarakan)'
       ],
       syllabus: [
         {
-          topic: 'HACCP (Hazard Analysis and Critical Control Points)',
-          detail: 'Sistem manajemen keamanan pangan berbasis pencegahan risiko yang wajib dimiliki setiap pabrik perikanan ekspor di dunia. Terdiri dari 7 prinsip utama dan 12 langkah penerapan.'
+          topic: 'Integrated KKP–Barantin Export Quality System (Sistem Mutu Terpadu KKP–Barantin)',
+          detail: 'KKP melalui BPPMHKP mengintegrasikan layanan sertifikasi penerapan mutu melalui sistem OSS dan aplikasi SIAPMUTU (Kep Ka BPPMHKP No. 44 Tahun 2024). Sejak Juli 2026 diperkuat penyatuan sistem Barantin–BPPMHKP untuk memangkas proses dua langkah menjadi satu alur layanan ekspor guna memperkuat jaminan kesehatan ikan dan traceability.'
         },
         {
-          topic: 'CCP (Critical Control Point / Titik Kendali Kritis)',
-          detail: 'Tahapan proses di dalam pabrik di mana pengendalian wajib dilakukan untuk mencegah atau menghilangkan bahaya keamanan pangan (contoh: tahap metal detector, pemasakan, atau pembekuan).'
+          topic: 'PMMT / HACCP Certification Requirements (Syarat Sertifikat PMMT/HACCP di OSS)',
+          detail: 'Diterbitkan Kepala BPPMHKP melalui OSS dengan 5 syarat wajib: (1) Perizinan Berusaha Subsektor Pengolahan/Pemasaran Ikan; (2) NIB; (3) Manual HACCP yang telah divalidasi; (4) Laporan hasil pembinaan; dan (5) Hasil audit internal, diikuti inspeksi lapangan oleh tim UPT BPPMHKP.'
         },
         {
-          topic: '7 Principles of HACCP (7 Prinsip Utama HACCP)',
-          detail: '(1) Analisis bahaya, (2) Penentuan CCP, (3) Penetapan batas kritis, (4) Sistem pemantauan CCP, (5) Tindakan koreksi jika menyimpang, (6) Prosedur verifikasi/audit, (7) Dokumentasi & pencatatan.'
+          topic: '7 Principles of HACCP & CCP (7 Prinsip Utama HACCP)',
+          detail: '(1) Analisis bahaya, (2) Penentuan CCP, (3) Penetapan batas kritis, (4) Sistem pemantauan CCP, (5) Tindakan koreksi, (6) Prosedur verifikasi/audit, (7) Dokumentasi & pencatatan.'
         }
       ],
       todos: [
         'Ikuti pelatihan sertifikasi HACCP dan SPI yang diadakan KKP / LSP / kampus sebelum lulus.',
-        'Kirim proposal PKL sejak semester 5 ke pabrik pengolahan udang/ikan ekspor skala besar di Jawa Timur atau Sulawesi.',
-        'Pelajari cara menggunakan Decision Tree (Pohon Keputusan) untuk menentukan apakah suatu tahapan proses adalah CCP atau bukan.'
+        'Kirim proposal PKL sejak semester 5 ke pabrik pengolahan udang/ikan ekspor skala besar di Jawa Timur, Sulawesi, atau Tarakan.',
+        'Hubungi Balai PPMHKP / KIPM Balikpapan untuk memetakan jadwal pembinaan teknis dan syarat inspeksi lapangan SKP/HACCP.'
       ],
-      output: 'Sertifikat kompetensi HACCP + Laporan PKL dari industri pengolahan ekspor berskala besar.',
-      tips: 'Jangan PKL di tempat yang santai di Samarinda jika ingin level-up cepat. Lihat langsung mesin pabrik miliaran rupiah di Jawa/Sulawesi.'
+      output: 'Sertifikat kompetensi HACCP + Berkas kesiapan pra-inspeksi (NIB, Manual GMP/SSOP, Manual HACCP Tervalidasi, Laporan Audit Internal).',
+      tips: 'Jangan PKL di tempat yang santai di Samarinda jika ingin level-up cepat. Lihat langsung mesin pabrik miliaran rupiah di Jawa/Sulawesi atau bermitra dengan UPI ber-SKP di Balikpapan.'
     },
     left: [
       {
         id: 'p5-gmp-haccp',
         category: 'branch',
-        badgeText: '📋 REGULASI & LEGALITAS',
+        badgeText: '📋 REGULASI & LEGALITAS KKP',
         badgeType: 'samarinda',
-        title: 'Penyusunan Dokumen GMP, SSOP, HACCP & Izin Edar',
-        subtitle: 'Bahasa wajib yang dipakai auditor BPOM, KKP, FDA Amerika, dan Uni Eropa',
-        keywords: '8 keys SSOP GMP seafood HACCP plan BPOM MD Halal',
+        title: 'Penyusunan Dokumen SKP, SPDI, HACCP & SMKHP',
+        subtitle: 'Alur lengkap perizinan OSS, aplikasi SIAPMUTU, dan layanan Balai PPMHKP Balikpapan',
+        keywords: 'SKP GMP SSOP SPDI SMKHP SIAPMUTU Balai PPMHKP Balikpapan',
         visualSteps: [
-          'Fondasi Dasar: Terapkan 8 Kunci SSOP (Sanitasi) & GMP (Cara Produksi yang Baik)',
-          'Analisis Bahaya (Biologi, Kimia, Fisika) → Tentukan CCP & Batas Kritis (Critical Limit)',
-          'Lengkapi Legalitas Komersial: NIB, PIRT / BPOM MD, SKP KKP, dan Sertifikat Halal BPJPH'
+          'Langkah 1 (OSS): Daftarkan NIB & Perizinan Subsektor Pengolahan/Pemasaran Ikan + SKP (GMP & SSOP)',
+          'Langkah 2 (OSS): Sertifikat PMMT/HACCP (5 dokumen wajib) & SPDI (Sertifikat Penerapan Distribusi Ikan)',
+          'Langkah 3 (SIAPMUTU): Ajukan SMKHP via Balai PPMHKP Balikpapan (0542-7581248) dengan Packing List & Hasil Lab'
         ],
         syllabus: [
           {
-            topic: '8 Keys of SSOP (8 Kunci Prosedur Operasi Standar Sanitasi)',
-            detail: '8 aspek kebersihan wajib pabrik ikan: (1) Keamanan air & es, (2) Kebersihan permukaan kontak produk, (3) Pencegahan kontaminasi silang, (4) Fasilitas cuci tangan & toilet, (5) Perlindungan dari bahan kimia, (6) Pelabelan & penyimpanan bahan beracun, (7) Kesehatan karyawan, (8) Pengendalian hama (pest control).'
+            topic: 'SKP & SPDI via OSS (Sertifikat Kelayakan Pengolahan & Distribusi Ikan)',
+            detail: 'SKP memastikan penerapan GMP dan SSOP (kelayakan bangunan, peralatan, sanitasi fasilitas, higiene pekerja) melalui audit tim KKP. SPDI menjamin kepatuhan rantai dingin selama pengangkutan dan distribusi dengan syarat surat keterangan mengikuti bimbingan teknis cara distribusi ikan yang baik.'
           },
           {
-            topic: 'Traceability System (Sistem Ketertelusuran Produk)',
-            detail: 'Kemampuan melacak riwayat setiap kotak produk ekspor hingga ke asal tambak/kapal penangkap, tanggal panen, dan pekerja yang memprosesnya menggunakan kode lot/batch.'
+            topic: 'SMKHP via SIAPMUTU & Balai PPMHKP Balikpapan',
+            detail: 'Sertifikat Mutu dan Keamanan Hasil Perikanan (Kep Ka BPPMHKP No. 44/2024) diajukan melalui SIAPMUTU dengan melampirkan packing list, pemenuhan SKP/PMMT-HACCP, hasil uji lab terakreditasi, dan nomor registrasi negara mitra. Dilayani di Kaltim oleh Balai PPMHKP Balikpapan (Jl. Kolonel Syarifudin Yoes RT 094 No. 10, Balikpapan 76115).'
+          },
+          {
+            topic: '8 Keys of SSOP & Traceability (8 Kunci Sanitasi & Ketertelusuran)',
+            detail: '(1) Keamanan air & es, (2) Kebersihan permukaan kontak produk, (3) Pencegahan kontaminasi silang, (4) Fasilitas cuci tangan & toilet, (5) Perlindungan dari bahan kimia, (6) Pelabelan bahan beracun, (7) Kesehatan karyawan, (8) Pengendalian hama, ditambah kode lot/batch hingga tambak asal.'
           }
         ],
         todos: [
-          'Susun 1 dokumen lengkap HACCP Plan (12 langkah) untuk produk Udang Beku IQF atau Fillet Ikan.',
-          'Pelajari alur pendaftaran izin edar BPOM MD (wajib untuk makanan beku/kaleng/suplemen) dan Sertifikat Halal.'
+          'Mendaftarkan NIB dan Perizinan Berusaha Subsektor Pengolahan/Pemasaran Ikan pada sistem OSS serta menyusun SOP sanitasi (SSOP) dan GMP.',
+          'Menyusun draf Manual HACCP tervalidasi dan formulir audit internal untuk produk Udang Beku IQF atau Fillet Ikan.',
+          'Mengikuti bimbingan teknis cara distribusi ikan yang baik sebagai syarat pengajuan SPDI di OSS.'
         ],
-        output: 'Portofolio dokumen lengkap GMP, SSOP, dan HACCP Plan siap tunjuk saat wawancara kerja.',
-        tips: 'Lulusan baru yang sudah bisa menyusun dokumen HACCP Plan langsung diprioritaskan oleh HRD pabrik.',
+        output: 'Berkas kesiapan pra-inspeksi berisi NIB, Draf Manual GMP/SSOP, Draf Manual HACCP Tervalidasi, dan Laporan Audit Internal awal.',
+        tips: 'Mahasiswa rintisan tidak harus membangun gedung pabrik senilai miliaran rupiah di awal untuk memperoleh SKP/HACCP; manfaatkan skema kerja sama produksi dengan UPI mitra di Balikpapan atau Samarinda yang sudah memiliki SKP dan registrasi ekspor aktif.',
         subBranches: [
           {
             id: 'p5-sub-bpom-halal',
             category: 'subbranch',
             badgeText: 'SUB-CABANG 5.1',
             badgeType: 'samarinda',
-            title: 'Izin Edar BPOM MD, PIRT, CPPOB & Sertifikat Halal',
-            subtitle: 'Syarat mutlak agar produk olahan ikanmu bisa masuk supermarket & ekspor',
-            keywords: 'BPOM MD CPPOB SJPH Halal certification food labeling SNI',
+            title: 'Kepatuhan BPOM, Halal & Registrasi Negara Mitra (FDA/EU/GACC)',
+            subtitle: 'Daftar periksa wajib untuk ritel nutraseutikal dalam negeri & syarat registrasi ekspor',
+            keywords: 'BPOM MD Halal FDA FSMA EU Approval Number GACC traceability',
             visualSteps: [
-              'Pemisahan alur perizinan: PIRT (produk kering suhu ruang UMKM) vs BPOM MD (frozen food, kaleng, suplemen)',
-              'Audit CPPOB (Cara Produksi Pangan Olahan yang Baik) & Sistem Jaminan Produk Halal (SJPH)',
-              'Desain Label Kemasan sesuai aturan BPOM (Komposisi, Berat Bersih, Informasi Nilai Gizi, Kode Produksi)'
+              'Pasar Domestik (Nutraseutikal/Albumin/Frozen Food): Wajib Izin Edar BPOM MD, Audit CPPOB & Sertifikat Halal',
+              'Pasar Ekspor (FDA FSMA AS, EU Approval Number, GACC Tiongkok): Wajib Nomor Registrasi Negara Mitra di SMKHP',
+              'Konsultasi Verifikasi: Hubungi Pejabat Mutu Balai PPMHKP Balikpapan (bkipmbpp@gmail.com) sebelum pengajuan'
             ],
             syllabus: [
               {
-                topic: 'CPPOB (Cara Produksi Pangan Olahan yang Baik)',
-                detail: 'Standar kelayakan fasilitas bangunan, alur ruangan, dan higiene produksi yang diaudit oleh BPOM sebelum menerbitkan nomor izin edar BPOM MD.'
+                topic: 'Partner Country Registration Numbers (Nomor Registrasi Negara Mitra)',
+                detail: 'Standar pelayanan BPPMHKP mewajibkan pencantuman nomor registrasi unit pengolahan ke negara mitra apabila dipersyaratkan negara tujuan (seperti FDA FSMA untuk AS, EU Approval Number untuk Uni Eropa dengan batas Pb tuna ≤ 0,4 ppm, dan GACC untuk Tiongkok).'
               },
               {
-                topic: 'SJPH (Sistem Jaminan Produk Halal)',
-                detail: 'Sistem manajemen untuk menjaga kesinambungan proses produksi halal mulai dari pemeriksaan bahan baku (seperti enzim, gelatin, bumbu) hingga penyimpanan bebas najis.'
+                topic: 'Verification Note for External Schemes (Catatan Verifikasi Regulasi Eksternal)',
+                detail: 'Karena prosedur teknis pendaftaran BPOM MD, Halal BPJPH, FDA FSMA, EU Approval Number, dan GACC memiliki portal serta syarat audit masing-masing, mahasiswa perlu menyusun daftar periksa dan berkonsultasi langsung dengan pejabat mutu Balai PPMHKP Balikpapan sebelum mengajukan registrasi.'
               }
             ],
             todos: [
-              'Pelajari perbedaan persyaratan ruang produksi antara PIRT dan BPOM MD.',
-              'Buat rancangan label kemasan pangan lengkap dengan tabel Informasi Nilai Gizi (Nutrition Facts).'
+              'Identifikasi celah persyaratan regulasi spesifik tujuan pasar (izin edar BPOM dan Halal untuk produk ritel albumin/pangan dalam negeri, serta nomor registrasi negara mitra FDA/EU/GACC bagi ekspor langsung).',
+              'Buat rancangan label kemasan pangan lengkap dengan Informasi Nilai Gizi (Nutrition Facts) dan kode lot ketertelusuran.'
             ],
-            output: 'Checklist kelengkapan audit CPPOB BPOM dan desain label kemasan patuh regulasi.',
+            output: 'Daftar periksa nomor registrasi negara tujuan dan kelengkapan dokumen izin edar domestik.',
             tips: 'Banyak produk UMKM Kaltim gagal masuk ritel modern hanya karena tidak punya nomor BPOM MD dan tabel gizi!'
           }
         ]
@@ -1241,7 +1257,7 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
         badgeType: 'global',
         title: 'Target PKL / Magang Pabrik Ekspor Nasional',
         subtitle: 'Pindah sementara dari Samarinda ke pusat industri pengolahan seafood Indonesia',
-        keywords: 'seafood export company Surabaya Sidoarjo Banyuwangi Makassar Bitung',
+        keywords: 'seafood export company Surabaya Sidoarjo Banyuwangi Makassar Bitung Tarakan',
         visualSteps: [
           'Klaster Jawa Timur (Surabaya, Sidoarjo, Pasuruan, Banyuwangi): Pusat pabrik udang & tuna terbesar',
           'Klaster Sulawesi (Makassar, Bitung, Kendari): Pusat ekspor ikan pelagis, gurita & rajungan',
@@ -1249,12 +1265,12 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
         ],
         syllabus: [
           {
-            topic: 'SKP (Sertifikat Kelayakan Pengolahan)',
-            detail: 'Sertifikat resmi yang diterbitkan Kementerian Kelautan dan Perikanan (KKP) dengan peringkat Grade A, B, atau C sebagai syarat mutlak pabrik boleh mengekspor.'
+            topic: 'Export Processing Plant Standards (Standar Pabrik Pengolahan Ekspor)',
+            detail: 'Operasional pabrik skala ekspor memadukan SKP Grade A, sertifikat PMMT/HACCP dari BPPMHKP, serta nomor registrasi negara tujuan (GACC/EU/FDA) dengan kapasitas produksi puluhan ton per hari.'
           },
           {
-            topic: 'EU Approval Number & FDA Registration',
-            detail: 'Nomor registrasi khusus pabrik pengolahan ikan Indonesia yang telah lolos audit langsung dari inspektur Uni Eropa dan Amerika Serikat.'
+            topic: 'Supply Chain Gap Opportunity (Celah Pasokan Bahan Baku Kalimantan)',
+            detail: 'Banyak pabrik ekspor di Jawa Timur kekurangan bahan baku udang windu dan ikan demersal dari Kalimantan—memahami sistem kerja mereka saat PKL membuka peluang kemitraan pasokan setelah lulus.'
           }
         ],
         todos: [
@@ -1289,7 +1305,7 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
             ],
             todos: [
               'Gambar sketsa tata letak (plant layout) lini produksi pembekuan udang atau pabrik ekstraksi albumin saat PKL.',
-              'Catat spesifikasi material dinding, lantai, dan pencahayaan ruang produksi sesuai standar SKP Grade A.'
+              'Catat spesifikasi material dinding, lantai, dan pencahayaan ruang produksi sesuai standar SKP.'
             ],
             output: 'Gambar teknis tata letak pabrik pengolahan perikanan standar ekspor.',
             tips: 'Jika suatu hari kamu membangun pabrik sendiri di Samarinda atau Balikpapan, desain layout yang benar sejak awal akan menghemat biaya renovasi ratusan juta rupiah.'
@@ -1300,7 +1316,7 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
   },
 
   // ==========================================================================
-  // FASE 6: KARIER AKSELERASI & PENGUASAAN BISNIS EKSPOR (TAHUN 1-2)
+  // FASE 6: KARIER AKSELERASI & EKONOMI UNIT EKSPOR (TAHUN 1-2)
   // ==========================================================================
   {
     id: 'phase-6',
@@ -1309,35 +1325,35 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
       category: 'spine',
       badgeText: 'FASE 6 • LULUS & TAHUN 1–2',
       badgeType: 'global',
-      title: 'Karier Akselerasi & Penguasaan Bisnis Ekspor',
-      subtitle: 'Mengumpulkan modal, kredibilitas, dan pemahaman transaksi perdagangan global',
-      keywords: 'seafood export business B2B international trade management trainee',
+      title: 'Karier Akselerasi, Pendanaan & Unit Economics Ekspor',
+      subtitle: 'Memanfaatkan P2MW/Kedaireka, neraca massa rendemen & lompatan nilai ekspor Kaltim',
+      keywords: 'P2MW Kemdiktisaintek Kedaireka unit economics mass balance seafood export Kaltim',
       visualSteps: [
-        'Jalur 1: Management Trainee (MT) / QA di Perusahaan Multinasional atau Eksportir Besar',
-        'Jalur 2: Bangun Unit Agregasi / Processing Mini di Kaltim untuk Pasok Pabrik Besar',
-        'Kuasai Negosiasi B2B, Kontrak Ekspor, dan Pembiayaan Perdagangan Internasional'
+        'Akselerasi Kampus & Lulusan: Pendanaan P2MW (3–5 mahasiswa) / Kedaireka Delta Mahakam atau MT/QA Industri',
+        'Kalkulasi Unit Economics: Neraca Massa (Mass Balance), Rendemen Lab & Lompatan Harga Hulu vs Ekspor',
+        'Validasi Pasar B2B & Ekspor: Kirim Sample Kit + CoA SNI & Petakan Logistik Reefer / Dokumen Ekspor'
       ],
       syllabus: [
         {
-          topic: 'B2B (Business-to-Business) Supply Chain',
-          detail: 'Model bisnis memasok bahan baku setengah jadi (seperti fillet ikan, udang HLSO, surimi, atau ekstrak kolagen) dalam jumlah tonase besar ke pabrik atau distributor luar negeri.'
+          topic: 'Competitive University Funding: P2MW & Kedaireka (Pendanaan Wirausaha & Hilirisasi)',
+          detail: 'Program Pembinaan Mahasiswa Wirausaha (P2MW) Kemdiktisaintek memberi bantuan dana pengembangan usaha dan pendampingan bagi kelompok 3–5 mahasiswa dengan usaha berjalan (maksimal 2 kali keikutsertaan pada tahun berbeda). Di FPIK Unmul juga terdapat rekam jejak kolaborasi Sekolah Lapang Kedaireka untuk komoditas ekspor pesisir Delta Mahakam.'
         },
         {
-          topic: 'Unit Economics & Yield Management (Manajemen Rendemen)',
-          detail: 'Dalam industri perikanan, selisih rendemen kupas udang atau fillet ikan sebesar 2% saja bisa menentukan apakah pabrik untung miliaran atau bangkrut.'
+          topic: 'Kaltim Upstream vs Export Value Leap (Lompatan Nilai Hulu ke Ekspor Kaltim)',
+          detail: 'Perbandingan data BPS 2022 vs realisasi ekspor 2026: Rumput laut hulu Rp4.102/kg, ikan karamba Rp36.266/kg, dan tambak sederhana Rp53.617/kg; sedangkan ekspor ikan segar/hidup 2026 mencapai Rp79.796/kg (2,2x karamba), bawal putih segar Rp114.249/kg, rata-rata ekspor perikanan Rp182.250/kg, dan ekspor udang menembus Rp198.242/kg (3,7x tambak hulu).'
         },
         {
-          topic: 'Export Pricing Structure (Struktur Harga Ekspor)',
-          detail: 'Perhitungan biaya ekspor dari hulu ke hilir: Harga Bahan Baku + Biaya Proses + Kemasan + Biaya Lab/Sertifikat + Trucking ke Pelabuhan + Ocean Freight + Asuransi + Margin Profit.'
+          topic: 'Mass Balance & Yield Management (Neraca Massa & Manajemen Rendemen)',
+          detail: 'Perhitungan presisi kebutuhan bahan kimia, enzim, dan energi per kilogram output berdasarkan rendemen laboratorium aktual (misal 78,03% pada kitosan udang windu atau 18,55% pada ekstrak albumin waterbath 40°C) untuk menetapkan harga jual B2B.'
         }
       ],
       todos: [
-        'Tingkatkan kemampuan Bahasa Inggris bisnis (terutama istilah negosiasi ekspor & korespondensi email B2B).',
-        'Pelajari cara menghitung HPP pabrik skala tonase termasuk biaya listrik cold storage, es, dan susut bobot.',
-        'Buat profil LinkedIn profesional yang menonjolkan keahlian THP, sertifikasi HACCP, dan pengalaman lab/PKL.'
+        'Bentuk tim 3–5 mahasiswa lintas keahlian (THP FPIK dan manajemen bisnis) untuk menyusun proposal pendanaan P2MW Kemdiktisaintek atau bergabung dalam riset terapan/Kedaireka.',
+        'Susun spreadsheet neraca massa (mass balance) dan biaya bahan kimia berdasarkan data rendemen lab nyata.',
+        'Buat profil LinkedIn profesional yang menonjolkan keahlian THP, sertifikasi HACCP, dan prototipe riset hilirisasi.'
       ],
-      output: 'Pengalaman profesional di industri pangan/ekspor atau kontrak pasokan B2B pertama.',
-      tips: 'Gunakan 1–2 tahun pertama setelah lulus untuk digaji sambil belajar cara perusahaan besar mengelola uang dan rantai pasok.'
+      output: 'Proposal P2MW atau hibah hilirisasi siap ajukan dan model keuangan unit economics berbasis rendemen lab aktual.',
+      tips: 'Gunakan fasilitas pendanaan P2MW/Kedaireka saat kuliah atau gaji 1–2 tahun pertama di perusahaan multinasional untuk membangun modal kerja dan kredibilitas teknis tanpa berutang besar.'
     },
     left: [
       {
@@ -1345,60 +1361,60 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
         category: 'branch',
         badgeText: '🏢 KARIER & KEWIRAUSAHAAN',
         badgeType: 'global',
-        title: 'Jalur Korporasi (MT/QA/R&D) & Manajemen Rendemen Pabrik',
-        subtitle: 'Membangun fondasi finansial, jaringan eksekutif & ketajaman hitung-hitungan pabrik',
-        keywords: 'management trainee FMCG quality assurance R&D food technologist',
+        title: 'Jalur Korporasi (MT/QA/R&D) & Neraca Massa Pabrik',
+        subtitle: 'Membangun fondasi finansial, jaringan eksekutif & ketajaman hitung-hitungan rendemen',
+        keywords: 'management trainee FMCG quality assurance R&D mass balance COGS BEP',
         visualSteps: [
           'Incar program Management Trainee (MT) di Indofood, Charoen Pokphand, Japfa, Mayora, atau Eksportir Seafood',
           'Kuasai standar audit global (BRCGS, ISO 22000, FSSC 22000, MSC/ASC)',
-          'Naik posisi ke QA Manager / Plant Manager atau kelola unit produksi mandiri'
+          'Terapkan Spreadsheet Neraca Massa (Mass Balance) untuk menghitung biaya pereaksi, enzim & HPP'
         ],
         syllabus: [
           {
-            topic: 'BRCGS / FSSC 22000 (Standar Keamanan Pangan Global GFSI)',
-            detail: 'Sertifikasi keamanan pangan tingkat tertinggi yang diminta oleh jaringan supermarket raksasa dunia (seperti Walmart, Costco, Carrefour).'
+            topic: 'BRCGS / FSSC 22000 & MSC/ASC (Standar Global & Keberlanjutan)',
+            detail: 'Sertifikasi keamanan pangan tingkat tertinggi (GFSI) dan sertifikasi keberlanjutan tangkap alam (MSC) / budidaya (ASC) yang memberikan harga jual premium di pasar Eropa dan Amerika.'
           },
           {
-            topic: 'MSC & ASC Certification (Sertifikasi Keberlanjutan Perikanan)',
-            detail: 'Marine Stewardship Council (tangkap alam) dan Aquaculture Stewardship Council (budidaya). Produk berlogo biru/hijau ini dibeli jauh lebih mahal oleh pasar Eropa dan AS.'
+            topic: 'Chemical & Enzyme Mass Balance (Neraca Massa Bahan Kimia & Enzim)',
+            detail: 'Menghitung kebutuhan aktual HCl 1,5 M, NaOH 60%, dan energi untuk menghasilkan 1 kg kitosan udang windu pada rendemen 78,03%, atau biaya enzim Alkalase 20.000 U/kg substrat untuk FPH guna mengunci margin bersih.'
           }
         ],
         todos: [
-          'Siapkan CV berbasis pencapaian teknis (sertifikasi HACCP, proyek lab, riset hilirisasi).',
+          'Siapkan CV berbasis pencapaian teknis (sertifikasi HACCP, proyek lab SNI, riset ekstraksi bioteknologi).',
           'Latih studi kasus pemecahan masalah produksi (Root Cause Analysis / Fishbone Diagram).'
         ],
-        output: 'Diterima bekerja di posisi strategis dengan jalur kenaikan karier cepat.',
-        tips: 'Koneksi dengan bagian Purchasing (pembelian bahan baku) di perusahaan besar akan sangat berguna saat kamu membuka usaha pemasok sendiri.',
+        output: 'Diterima bekerja di posisi strategis atau siap menjalankan unit produksi mandiri berbasis hitungan neraca massa.',
+        tips: 'Koneksi dengan bagian Purchasing (pembelian bahan baku) dan R&D di perusahaan besar akan sangat berguna saat kamu menawarkan sampel bahan baku bioteknologi sendiri.',
         subBranches: [
           {
             id: 'p6-sub-yield-hpp',
             category: 'subbranch',
             badgeText: 'SUB-CABANG 6.1',
             badgeType: 'global',
-            title: 'Perhitungan Rendemen (Yield), HPP & Break-Even Point Pabrik',
-            subtitle: 'Ilmu wajib pemilik pabrik agar margin profit tidak bocor di meja produksi',
-            keywords: 'fish fillet yield calculation seafood processing cost COGS BEP',
+            title: 'Spreadsheet Neraca Massa, Rendemen (Yield) & BEP Produksi',
+            subtitle: 'Menghitung biaya konversi udang beku, fillet patin & serbuk ekstrak B2B',
+            keywords: 'mass balance fish fillet yield calculation COGS BEP seafood processing',
             visualSteps: [
               'Hitung Yield Bertahap: Berat Utuh (Whole) → Tanpa Kepala (Headless ~65%) → Kupas Bersih (PTO ~48%)',
-              'Kalkulasi Biaya Konversi per Kg (Tenaga kerja kupas, listrik cold storage, air, es, kemasan)',
-              'Tentukan Harga Jual Minimum & Titik Impas (BEP Tonase Bulanan)'
+              'Hitung Neraca Massa Ekstraksi: Bahan Baku Limbah + Pereaksi (NaOH/HCl/Enzim) + Energi → Rendemen Serbuk',
+              'Tentukan Harga Jual Minimum B2B & Titik Impas (BEP Tonase Bulanan)'
             ],
             syllabus: [
               {
-                topic: 'Processing Yield / Rendemen Pengolahan',
-                detail: 'Persentase berat produk akhir yang dihasilkan dibagi berat bahan baku awal dikali 100%. Contoh: 100 kg ikan patin utuh menghasilkan ~35–38 kg fillet tanpa kulit (skinless fillet).'
+                topic: 'Processing Yield & Shrinkage (Rendemen & Susut Bobot)',
+                detail: 'Persentase berat produk akhir dibagi berat bahan baku awal dikali 100% (misal fillet patin tanpa kulit ~35–38%), ditambah perhitungan susut bobot pembekuan 1–3%.'
               },
               {
-                topic: 'Shrinkage / Susut Bobot Pembekuan',
-                detail: 'Kehilangan berat daging akibat penguapan air selama proses pembekuan di mesin ABF (biasanya 1–3%) yang wajib diperhitungkan dalam rumus harga jual.'
+                topic: 'Commercial Cost Verification Note (Catatan Verifikasi HPP Komersial)',
+                detail: 'Karena harga pereaksi industri teknis, tarif listrik kawasan, dan efisiensi mesin skala pabrik berbeda dari skala lab, spreadsheet neraca massa wajib diperbarui dengan penawaran harga vendor lokal sebelum penandatanganan kontrak.'
               }
             ],
             todos: [
-              'Buat template kalkulator Excel untuk menghitung HPP pengolahan udang beku dan fillet ikan patin.',
+              'Buat template kalkulator Excel neraca massa untuk menghitung HPP pengolahan udang beku, fillet patin, dan 1 kg serbuk kitosan/FPH.',
               'Simulasikan dampak kenaikan harga bahan baku 10% terhadap margin keuntungan bersih.'
             ],
-            output: 'Model finansial Excel unit ekonomi pengolahan hasil perikanan.',
-            tips: 'Banyak bisnis perikanan bangkrut bukan karena tidak laku, melainkan karena salah menghitung rendemen dan susut bobot!'
+            output: 'Model finansial Excel unit ekonomi & neraca massa pengolahan hasil perikanan.',
+            tips: 'Banyak bisnis perikanan bangkrut bukan karena tidak laku, melainkan karena salah menghitung rendemen dan biaya pereaksi/energi per kilogram output!'
           }
         ]
       }
@@ -1407,31 +1423,31 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
       {
         id: 'p6-ekspor-trade',
         category: 'branch',
-        badgeText: '🚢 EKSPOR GLOBAL',
+        badgeText: '🚢 EKSPOR GLOBAL & B2B',
         badgeType: 'leverage',
-        title: 'Mekanisme Ekspor Kontainer & Pembayaran Dunia',
-        subtitle: 'Cara mengirim ikan dari Kaltim ke Jepang/AS dan dibayar aman dalam Dolar',
-        keywords: 'seafood export documents health certificate COO LC incoterms FOB CIF',
+        title: 'Mekanisme Ekspor Kontainer, B2B Sample Kit & Trade Finance',
+        subtitle: 'Cara mengirim produk dari Kaltim ke pasar global & validasi buyer B2B dengan CoA SNI',
+        keywords: 'seafood export documents SMKHP PEB SKA Bill of Lading LC TT Incoterms',
         visualSteps: [
-          'Cari Buyer Luar Negeri (TradeMap, pameran Seafood Expo Global, Atase Perdagangan/ITPC)',
-          'Siapkan Dokumen Wajib: Health Certificate (BKIPM), Certificate of Origin (SKA), Bill of Lading',
-          'Kirim via Reefer Container (-20°C) dengan pembayaran aman Letter of Credit (L/C)'
+          'Kirim Sample Kit B2B + CoA SNI Lab Terakreditasi & Technical Data Sheet ke Industri Pangan/Kosmetik/Farmasi',
+          'Siapkan Dokumen Ekspor: PEB, Commercial Invoice, Packing List, SKA (COO), B/L & SMKHP Terpadu Barantin–BPPMHKP',
+          'Wawancara & Validasi Rute Reefer Container / Air Cargo Kaltim + Kontrak Incoterms (FOB/CIF) & L/C atau T/T'
         ],
         syllabus: [
           {
-            topic: 'Incoterms: FOB vs CIF (Syarat Penyerahan Barang Ekspor)',
-            detail: 'FOB (Free On Board): Tanggung jawabmu sampai barang naik ke kapal di pelabuhan muat (misal Pelabuhan Kariangau/Semayang). CIF (Cost, Insurance, Freight): Kamu menanggung ongkos kirim dan asuransi sampai pelabuhan negara tujuan.'
+            topic: 'B2B Sample Kit & Technical Data Sheet Strategy (Strategi Penawaran Sampel B2B)',
+            detail: 'Mengirimkan sample kit prototipe bioteknologi (kitosan, kolagen, albumin, FPH) atau olahan MAP yang dilengkapi CoA SNI dari lab terakreditasi dan Lembar Data Teknis ke manajer R&D pabrik pangan fungsional, kosmetik, dan nutraseutikal untuk meraih Letter of Intent (LoI).'
           },
           {
-            topic: 'Letter of Credit / L/C (Jaminan Pembayaran Bank)',
-            detail: 'Instrumen pembayaran internasional di mana bank pembeli menjamin akan membayar eksportir begitu dokumen pengapalan (Bill of Lading & Health Certificate) diserahkan sesuai kontrak.'
+            topic: 'Incoterms (FOB vs CIF) & Payment Instruments (L/C vs T/T)',
+            detail: 'FOB (Free On Board): Tanggung jawab eksportir sampai barang naik ke kapal di pelabuhan muat. CIF (Cost, Insurance, Freight): Eksportir menanggung ongkos kirim dan asuransi sampai pelabuhan tujuan. Pembayaran diamankan via Letter of Credit (L/C) bank atau Telegraphic Transfer (T/T) dengan DP.'
           }
         ],
         todos: [
-          'Pelajari cara mengakses data pembeli luar negeri gratis melalui situs TradeMap.org dan Kementerian Perdagangan.',
-          'Pahami prosedur penerbitan Health Certificate dari Balai Karantina Ikan (BKIPM).'
+          'Lakukan wawancara teknis langsung dengan minimal dua pelaku ekspor perikanan di Kalimantan Timur atau dinas terkait untuk memetakan rute pengiriman reefer container dan kargo udara.',
+          'Kirimkan sample kit produk bioteknologi atau olahan MAP (dilengkapi CoA SNI dan lembar data teknis) ke industri pangan fungsional, kosmetik, dan nutraseutikal nasional untuk memperoleh LoI.'
         ],
-        output: 'Simulasi penawaran harga ekspor (Export Quotation Sheet) dalam USD per kg (FOB & CIF).',
+        output: 'Minimal satu Letter of Intent (LoI) atau kontrak uji coba pembelian sampel B2B serta simulasi Export Quotation Sheet (FOB/CIF).',
         tips: 'Jangan pernah mengirim kontainer ekspor pertama tanpa DP minimal 30–50% atau jaminan L/C dari bank terpercaya.',
         subBranches: [
           {
@@ -1439,30 +1455,30 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
             category: 'subbranch',
             badgeText: 'SUB-CABANG 6.2',
             badgeType: 'leverage',
-            title: 'Dokumen Wajib Ekspor Perikanan & Reefer Container',
-            subtitle: 'Syarat mutlak agar kontainer tidak tertahan di bea cukai negara tujuan',
-            keywords: 'reefer container cold chain health certificate seafood export',
+            title: 'Dokumen Kepabeanan Ekspor, Reefer Container & Air Cargo Kaltim',
+            subtitle: 'Integrasi PEB, SKA, B/L, SMKHP Barantin–BPPMHKP & verifikasi logistik berpendingin',
+            keywords: 'reefer container air freight Kaltim PEB SKA Bill of Lading SMKHP',
             visualSteps: [
-              'PEB (Pemberitahuan Ekspor Barang) & Commercial Invoice / Packing List',
-              'Health Certificate (HC) dari Karantina Ikan & Catch Certificate (SHTI)',
-              'Stuffing ke Reefer Container 20ft/40ft suhu terkontrol -20°C dengan Data Logger'
+              'PEB (Pemberitahuan Ekspor Barang), Commercial Invoice, Packing List & SKA (Certificate of Origin)',
+              'SMKHP Terpadu Barantin–BPPMHKP (satu pintu layanan ekspor sejak Juli 2026) & SHTI (Catch Certificate)',
+              'Stuffing ke Reefer Container (-20°C) atau Air Cargo Berpendingin setelah verifikasi jadwal pelayaran Kaltim'
             ],
             syllabus: [
               {
-                topic: 'Reefer Container (Kontainer Berpendingin)',
-                detail: 'Kontainer pengiriman laut khusus yang dilengkapi mesin pendingin mandiri untuk menjaga suhu stabil antara -25°C hingga +25°C selama pelayaran lintas benua.'
+                topic: 'Reefer Container & Air Cargo Verification (Verifikasi Logistik Berpendingin Kaltim)',
+                detail: 'Kontainer berpendingin menjaga suhu -25°C hingga +25°C (kapasitas 20ft ~10–12 ton; 40ft HC ~22–25 ton). Catatan lapangan: jadwal kapal reefer, tarif kontainer, dan kapasitas kargo udara dingin dari pelabuhan/bandara Kaltim wajib dikonfirmasi langsung ke penyedia logistik dan eksportir terdaftar sebelum menutup kontrak CIF.'
               },
               {
-                topic: 'Catch Certificate / SHTI (Sertifikat Hasil Tangkapan Ikan)',
-                detail: 'Dokumen wajib untuk membuktikan bahwa ikan yang diekspor berasal dari penangkapan legal (bebas Illegal, Unreported, and Unregulated / IUU Fishing).'
+                topic: 'Catch Certificate / SHTI & Single-Window SMKHP',
+                detail: 'SHTI membuktikan ikan berasal dari penangkapan legal (bebas IUU Fishing), sedangkan sistem terpadu Barantin–BPPMHKP memangkas birokrasi karantina dan sertifikat mutu ekspor menjadi satu alur digital.'
               }
             ],
             todos: [
-              'Pelajari kapasitas muat Reefer Container 20 feet (~10–12 ton) dan 40 feet High Cube (~22–25 ton).',
-              'Cek rute pelayaran ekspor langsung dari Pelabuhan Kariangau Balikpapan ke luar negeri.'
+              'Verifikasi rute aktual, jadwal kapal reefer, dan tarif kargo udara berpendingin dari pelabuhan/bandara Kalimantan Timur bersama penyedia logistik.',
+              'Susun daftar periksa dokumen ekspor lengkap (PEB, SKA, B/L, Packing List, SMKHP terpadu).'
             ],
-            output: 'Checklist lengkap dokumen ekspor hasil perikanan Indonesia.',
-            tips: 'Pelabuhan Kaltim Kariangau Terminal (KKT) di Balikpapan kini memiliki rute pelayaran langsung internasional yang memangkas biaya logistik!'
+            output: 'Checklist lengkap dokumen ekspor hasil perikanan Indonesia dan matriks biaya logistik Kaltim.',
+            tips: 'Pelabuhan Kaltim Kariangau Terminal (KKT) di Balikpapan memiliki layanan ekspor langsung yang memangkas biaya transit domestik!'
           },
           {
             id: 'p6-sub-buyer-hunting',
@@ -1470,12 +1486,12 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
             badgeText: 'SUB-CABANG 6.3',
             badgeType: 'leverage',
             title: 'Strategi Mencari Buyer Luar Negeri & Negosiasi B2B',
-            subtitle: 'Cara menembus importir seafood di Jepang, Amerika, Tiongkok & Timur Tengah',
-            keywords: 'TradeMap seafood importers B2B negotiation sample shipment',
+            subtitle: 'Menembus importir seafood & bahan aktif di Jepang, AS, Tiongkok & Timur Tengah',
+            keywords: 'TradeMap seafood importers HS Code 0306 0304 B2B negotiation sample shipment',
             visualSteps: [
-              'Riset negara importir terbesar kode HS Perikanan (HS Code 0306 Udang, 0304 Fillet Ikan) di TradeMap',
-              'Kirim Company Profile + Product Spec Sheet + Harga FOB/CIF ke email Purchasing Importir',
-              'Kirim Sampel Produk Beku via Air Cargo (DHL/FedEx) → Uji Lab Buyer → Kontrak Kontainer Pertama'
+              'Riset negara importir terbesar kode HS Perikanan (HS 0306 Udang, HS 0304 Fillet Ikan) di TradeMap',
+              'Kirim Company Profile + Technical Data Sheet / Product Spec Sheet + Harga FOB/CIF ke Purchasing Importir',
+              'Kirim Sampel Beku/Serbuk via Air Cargo (DHL/FedEx) → Uji Lab Buyer → Kontrak Pengiriman Pertama'
             ],
             syllabus: [
               {
@@ -1484,15 +1500,15 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
               },
               {
                 topic: 'Product Specification Sheet (Lembar Spesifikasi Produk Ekspor)',
-                detail: 'Dokumen teknis 1 halaman berisi nama latin spesies, ukuran (size count per pound), persentase glazing, jenis kemasan, standar mikrobiologi, dan sertifikasi pabrik.'
+                detail: 'Dokumen teknis 1 halaman berisi nama latin spesies, ukuran (size count per pound) atau parameter kemurnian ekstrak, standar mikrobiologi SNI, dan nomor registrasi pabrik.'
               }
             ],
             todos: [
-              'Buat 1 dokumen Company Profile & Product Spec Sheet berbahasa Inggris yang profesional.',
-              'Daftar akun gratis di TradeMap.org dan analisis 5 negara tujuan ekspor utama udang & ikan Indonesia.'
+              'Buat 1 dokumen Company Profile & Technical Data Sheet berbahasa Inggris yang profesional.',
+              'Daftar akun gratis di TradeMap.org dan analisis 5 negara tujuan ekspor utama udang & ikan Indonesia serta lakukan verifikasi kredibilitas calon buyer.'
             ],
-            output: 'Database 20 importir seafood luar negeri beserta dokumen penawaran B2B.',
-            tips: 'Buyer luar negeri tidak peduli seberapa besar kantormu di Samarinda—yang mereka nilai adalah kelengkapan spesifikasi teknis, sertifikat mutu, dan ketepatan pengiriman sampel!'
+            output: 'Database 20 calon buyer B2B/importir seafood terverifikasi beserta dokumen penawaran resmi.',
+            tips: 'Buyer luar negeri tidak peduli seberapa besar kantormu di Samarinda—yang mereka nilai adalah kelengkapan CoA laboratorium terakreditasi, nomor registrasi resmi, dan ketepatan pengiriman sampel!'
           }
         ]
       }
@@ -1513,18 +1529,18 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
       subtitle: 'Membangun kerajaan bisnis perikanan terintegrasi dari Kalimantan Timur untuk pasar dunia',
       keywords: 'seafood processing plant investment scaling B2B export business Kaltim IKN',
       visualSteps: [
-        'Kuasai Hulu: Kemitraan Kontrak Tambak Delta Mahakam, Rumput Laut PPU/Kukar & Nelayan Mahakam',
-        'Kuasai Tengah: Pabrik Cold Storage & Ekstraksi SUS 316L Berstandar SKP Grade A / HACCP / BPOM MD',
+        'Kuasai Hulu: Kemitraan Kontrak Tambak Silvofishery Delta Mahakam, Rumput Laut Bontang/PPU & Nelayan Mahakam',
+        'Kuasai Tengah: Pabrik Cold Storage & Ekstraksi SUS 316L Berstandar SKP Grade A / PMMT-HACCP / BPOM MD',
         'Kuasai Hilir: Ekspor Kontainer FCL via KKT Balikpapan, Kontrak B2B Kosmetik/Farmasi & Pasokan IKN'
       ],
       syllabus: [
         {
           topic: 'Vertical Integration (Integrasi Vertikal Hulu ke Hilir)',
-          detail: 'Strategi menguasai rantai pasok secara menyeluruh dari sumber bahan baku (kemitraan tambak/nelayan), fasilitas pengolahan milik sendiri (pabrik dan cold storage), hingga penjualan langsung ke pembeli luar negeri atau industri hilir tanpa perantara berlapis.'
+          detail: 'Strategi menguasai rantai pasok secara menyeluruh dari sumber bahan baku (kemitraan tambak silvofishery/nelayan), fasilitas pengolahan milik sendiri (pabrik dan cold storage), hingga penjualan langsung ke pembeli luar negeri atau industri hilir tanpa perantara berlapis.'
         },
         {
           topic: 'Asset and IP Leverage (Daya Ungkit Aset Fisik & Kekayaan Intelektual)',
-          detail: 'Kekayaan besar dibangun dari kepemilikan fasilitas produksi berizin ekspor yang memiliki hambatan masuk tinggi (SKP Grade A, HACCP, Approval Number) serta perlindungan Paten Sederhana atas formulasi ekstraksi bernilai tinggi di DJKI.'
+          detail: 'Kekayaan besar dibangun dari kepemilikan fasilitas produksi berizin ekspor yang memiliki hambatan masuk tinggi (SKP Grade A, PMMT/HACCP, Approval Number) serta perlindungan Paten Sederhana atas formulasi ekstraksi bernilai tinggi di DJKI.'
         },
         {
           topic: 'Good Corporate Governance (Tata Kelola Perseroan Terbatas Bankable)',
@@ -1616,13 +1632,13 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
             keywords: 'silvofishery Delta Mahakam contract farming traceability Channa striata 600-900g',
             visualSteps: [
               'Delta Mahakam (Muara Badak & Anggana): Kemitraan Tambak Silvofishery Udang Windu Bebas Antibiotik',
-              'PPU, Paser, Berau & Muara Badak: Agregasi Rumput Laut (9.000 Ton/Thn di PPU) & Ikan Karang Ekspor',
+              'Bontang (4.185 Ton), PPU, Paser & Berau: Agregasi Rumput Laut & Ikan Karang Ekspor',
               'Mahakam Tengah (Kota Bangun & Muara Muntai): Sortasi Ikan Gabus Bobot 600–900g (Albumin Tertinggi)'
             ],
             syllabus: [
               {
                 topic: 'Silvofishery and Supplier Certification (Tambak Silvofishery & Sertifikasi Pemasok)',
-                detail: 'Budidaya udang windu berbasis silvofishery di kawasan mangrove Delta Mahakam unggul karena alami dan bebas antibiotik. Untuk menembus pabrik pemegang Approval Number Uni Eropa, KKP mewajibkan sertifikasi ketertelusuran hingga tingkat pemasok bahan baku.'
+                detail: 'Budidaya udang windu berbasis silvofishery di kawasan mangrove Delta Mahakam dan Pegat Batumbuk Berau unggul karena alami dan bebas antibiotik. Untuk menembus pabrik pemegang Approval Number Uni Eropa, KKP mewajibkan sertifikasi ketertelusuran hingga tingkat pemasok bahan baku.'
               },
               {
                 topic: 'Optimal Snakehead Grading (Standar Ukuran Ikan Gabus DAS Mahakam)',
@@ -1630,7 +1646,7 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
               },
               {
                 topic: 'Regional Downstream Synergy (Sinergi Ekosistem Hilirisasi Kaltim)',
-                detail: 'Kaltim tengah mempercepat hilirisasi daerah, antara lain lewat 6.000 ha tambak produktif rumput laut di PPU (9.000 ton/tahun), penyelesaian pabrik olahan rumput laut Pemkab Kukar di Muara Badak, serta program HILIR BERAU dan rumah produksi pengalengan ikan di Tanjung Batu.'
+                detail: 'Kaltim tengah mempercepat hilirisasi daerah, antara lain lewat 6.000 ha tambak produktif rumput laut di PPU (9.000 ton/tahun), produksi rumput laut Bontang 4.185 ton/tahun, penyelesaian pabrik olahan rumput laut Pemkab Kukar di Muara Badak, serta program HILIR BERAU dan rumah produksi pengalengan ikan di Tanjung Batu.'
               }
             ],
             todos: [
